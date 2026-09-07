@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于 · 山月集</title>
+  <title>关于 · 心屿</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -11,42 +11,56 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="logo" href="index.html">山月集</a>
+      <a class="logo" href="index.html">心屿</a>
       <div class="nav-links">
-        <a href="index.html">首页</a>
+        <a href="index.html">工具箱</a>
+        <a href="resources.html">求助资源</a>
         <a href="about.html" class="active">关于</a>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
     </nav>
   </header>
 
-  <main class="container article-body">
-    <h1>关于我</h1>
-    <p>你好，我是「山月」，一个坐标中国的软件开发者与文字爱好者。</p>
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
 
-    <p>白天，我在屏幕前与代码为伴；夜晚，我喜欢翻开一本书，或者写下一些不成体系的思考。这个博客，就是我的这两重生活交汇的地方。</p>
+  <main class="container tool-page">
+    <h1>关于「心屿」</h1>
+    <p class="lead">名字取"心的岛屿"之意——在情绪的海洋里，给你一处可以短暂停靠、喘口气的地方。</p>
 
-    <h2>我在这里写什么</h2>
+    <h2>这是做什么的</h2>
+    <p>心屿是一个公益性质的心理自助信息站。我们把一些简单、当下就能做的情绪安抚方法整理成工具，放进你的口袋里，供你在难受的时候随手翻开。</p>
+    <p>我们希望它安静、克制、不贩卖焦虑，也不夸大"自己就好了"——有些情绪需要被认真对待，甚至需要专业帮助。这里绝不评判你。</p>
+
+    <h2>我们做与不做</h2>
     <ul>
-      <li><strong>技术笔记</strong>：记录编程路上的踩坑与心得。</li>
-      <li><strong>生活随笔</strong>：季节、旅途，和一些细碎的日常。</li>
-      <li><strong>读书札记</strong>：读到的好书与由此引发的念头。</li>
+      <li><strong>我们做</strong>：科普与自助练习、情绪安抚步骤、求助资源整理。</li>
+      <li><strong>我们不做</strong>：不诊断、不给疾病下标签、不提供在线咨询、不替代专业诊疗。</li>
     </ul>
 
-    <h2>关于「山月集」这个名字</h2>
-    <p>名字取自「松风吹解带，山月照弹琴」。希望这里能像山间明月一样，安静而明亮，供偶尔路过的人歇一歇脚。</p>
+    <h2>重要声明（请务必阅读）</h2>
+    <div class="callout seek-help">
+      <span class="label">免责声明</span>
+      <p>本站所有内容均为一般性的心理教育与自助材料，<strong>不构成医疗建议，不用于诊断、治疗或预防任何疾病</strong>，也不能替代执业医师、心理治疗师或精神科医生的专业判断。</p>
+      <p>如果你正在经历严重或持续的心理困扰，请及时就医或寻求专业心理帮助。若是紧急危机（自伤、自杀念头等），请立即拨打热线或前往急诊。</p>
+    </div>
 
-    <h2>联系方式</h2>
-    <p>欢迎交流，你可以通过以下方式找到我：</p>
+    <h2>联系方式与参与</h2>
+    <p>心屿由志愿者维护。如果你发现热线信息有误、或希望补充当地求助资源、或想参与内容共建，欢迎通过以下方式联系我们：</p>
     <ul>
-      <li>邮箱：hello@example.com</li>
-      <li>GitHub：github.com/yourname</li>
-      <li>微博：@你的昵称</li>
+      <li>邮箱：hello@xinyu.example.com</li>
+      <li>合作 / 纠错建议：随时来信，我们很需要你。</li>
     </ul>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 山月集 · 用文字对抗遗忘</p>
+    <p class="disclaimer">
+      心屿是一个公益性质的心理自助信息站。所有内容仅供参考，不构成医疗建议，
+      不能替代专业心理治疗。遇到紧急危机时，请第一时间拨打求助热线或就医。
+    </p>
+    <p style="margin-top:6px;">© 2025 心屿</p>
   </footer>
 
   <script src="script.js"></script>

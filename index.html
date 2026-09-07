@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>山月集 · 个人博客</title>
+  <title>心屿 · 心理自助工具箱</title>
+  <meta name="description" content="一个面向普通人的心理自助与情绪安抚工具站：情绪急救、焦虑缓解、失眠助眠、低落自救、正念练习与求助资源。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -11,49 +12,74 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="logo" href="index.html">山月集</a>
+      <a class="logo" href="index.html">心屿</a>
       <div class="nav-links">
-        <a href="index.html" class="active">首页</a>
+        <a href="index.html" class="active">工具箱</a>
+        <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
       <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
     </nav>
   </header>
 
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
+
   <main class="container">
     <section class="hero">
-      <h1>你好，我是<span class="accent">山月</span></h1>
-      <p class="tagline">在这里记录代码、生活与思考。</p>
+      <h1>心屿 <span class="accent">· 心理自助工具箱</span></h1>
+      <p class="tagline">当情绪翻涌、心里不好受的时候，这里是你可以待一会儿的地方。没有评判，只有一步一步、当下就能做的事。</p>
     </section>
 
-    <section class="posts">
-      <h2 class="section-title">最新文章</h2>
+    <section class="tool-grid">
+      <a class="tool-card" href="emergency.html">
+        <span class="tool-emoji">🧯</span>
+        <h3>情绪急救</h3>
+        <p>情绪突然崩溃、难受得不知道怎么办时，先做这几步——5 分钟内让身体和大脑稍微落地。</p>
+      </a>
+      <a class="tool-card" href="anxiety.html">
+        <span class="tool-emoji">🫁</span>
+        <h3>焦虑缓解</h3>
+        <p>心跳加速、坐立不安、脑子里全是糟心事时，用呼吸法和认知拆解让紧绷慢慢松开。</p>
+      </a>
+      <a class="tool-card" href="sleep.html">
+        <span class="tool-emoji">🌙</span>
+        <h3>失眠助眠</h3>
+        <p>躺在床上翻来覆去睡不着？从睡眠卫生到放松引导，帮你把晚上的开关调松一点。</p>
+      </a>
+      <a class="tool-card" href="lowmood.html">
+        <span class="tool-emoji">🌿</span>
+        <h3>低落自救</h3>
+        <p>没力气、提不起劲、一切都灰蒙蒙时，用"小步骤法"一点点把今天重新推动起来。</p>
+      </a>
+      <a class="tool-card" href="mindfulness.html">
+        <span class="tool-emoji">🧘</span>
+        <h3>正念练习</h3>
+        <p>把注意力带回当下：引导式正念、身体扫描、三分钟呼吸空间，随时可以开始。</p>
+      </a>
+      <a class="tool-card" href="resources.html">
+        <span class="tool-emoji">🆘</span>
+        <h3>求助资源</h3>
+        <p>24 小时心理援助热线、怎么挂号看医生、什么时候该找专业帮助——请别独自硬扛。</p>
+      </a>
+    </section>
 
-      <article class="post-card">
-        <div class="post-meta"><span class="post-date">2025-05-18</span><span class="post-tag">随笔</span></div>
-        <h3 class="post-title"><a href="articles/first-post.html">写给我的第一篇文章：把日子过成诗</a></h3>
-        <p class="post-excerpt">为什么要开始写博客？一是为了记录，二是为了思考。写作的本质，是让模糊的想法变得清晰。</p>
-        <a class="post-more" href="articles/first-post.html">阅读全文 →</a>
-      </article>
-
-      <article class="post-card">
-        <div class="post-meta"><span class="post-date">2025-04-02</span><span class="post-tag">技术</span></div>
-        <h3 class="post-title"><a href="articles/build-blog.html">手把手搭建一个纯静态博客</a></h3>
-        <p class="post-excerpt">不需要复杂的框架，一个 HTML 文件加上一点 CSS 和 JavaScript，就能拥有一个干净清爽的个人网站。</p>
-        <a class="post-more" href="articles/build-blog.html">阅读全文 →</a>
-      </article>
-
-      <article class="post-card">
-        <div class="post-meta"><span class="post-date">2025-02-11</span><span class="post-tag">读书</span></div>
-        <h3 class="post-title"><a href="articles/reading-notes.html">最近在读：慢下来的力量</a></h3>
-        <p class="post-excerpt">在这个什么都求快的时代，学会慢下来，反而是一种稀缺的能力。分享几本关于「慢生活」的书。</p>
-        <a class="post-more" href="articles/reading-notes.html">阅读全文 →</a>
-      </article>
+    <section>
+      <div class="callout note">
+        <span class="label">开始之前</span>
+        <p>这里的内容是自助教育与情绪安抚工具，<strong>不能替代专业的心理咨询、诊断或药物治疗</strong>。如果你长期受情绪困扰，或已经影响到睡眠、工作与生活，请读一读 <a href="resources.html">求助资源</a> 页，主动寻求专业帮助。</p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 山月集 · 用文字对抗遗忘</p>
+    <p class="disclaimer">
+      心屿是一个公益性质的心理自助信息站。所有内容仅供参考，不构成医疗建议，
+      不能替代专业心理治疗。遇到紧急危机时，请第一时间拨打求助热线或就医。
+    </p>
+    <p style="margin-top:6px;">© 2025 心屿 · 愿你在此歇一歇脚</p>
   </footer>
 
   <script src="script.js"></script>

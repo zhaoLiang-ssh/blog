@@ -1,80 +1,51 @@
-# 山月集 · 个人博客
+# 心屿 · 心理自助工具箱
 
-一个纯静态（HTML / CSS / JavaScript）个人博客，可免费部署到 **GitHub Pages**。
+一个纯静态（HTML / CSS / JavaScript）的公益心理自助信息站，可免费部署到 **GitHub Pages**。
+
+当情绪翻涌、心里不好受的时候，这里提供几个"当下就能做"的自助工具，并强调：本内容不构成医疗建议、不能替代专业诊疗，遇到危机请第一时间拨打求助热线。
 
 ## 项目结构
 
 ```
 .
-├── index.html          # 首页（最新文章列表）
-├── about.html          # 关于页
-├── 404.html            # 自定义 404 页面
-├── style.css           # 全局样式（含浅色/深色主题）
-├── script.js           # 深色模式切换脚本
-├── .nojekyll           # 让 GitHub Pages 以纯静态方式托管（不启用 Jekyll）
-└── articles/           # 文章目录
-    ├── first-post.html
-    ├── build-blog.html
-    └── reading-notes.html
+├── index.html          # 首页：工具箱入口
+├── emergency.html      # 情绪急救
+├── anxiety.html        # 焦虑缓解
+├── sleep.html          # 失眠助眠
+├── lowmood.html        # 低落自救
+├── mindfulness.html    # 正念练习
+├── resources.html      # 求助资源（热线与就医指南）
+├── about.html          # 关于与免责声明
+├── 404.html            # 自定义 404
+├── style.css           # 全局样式（含浅色/深色主题，柔和安抚配色）
+├── script.js           # 深色模式切换
+└── .nojekyll           # 让 GitHub Pages 以纯静态方式托管（不启用 Jekyll）
 ```
 
 所有内部链接均使用**相对路径**，因此无论部署在仓库根目录、`/docs`，还是子路径下都能正常工作。
 
----
+## 站点设计原则
 
-## 🚀 部署到 GitHub Pages（三步）
+- **伦理底线优先**：每个页面顶部有危机求助提示条，全站含免责声明，内容不诊断、不打标签。
+- **当下可执行**：每个工具页都是"分钟级、随手能做"的步骤，而非长篇道理。
+- **深色模式**：夜间浏览舒适（很多情绪低落的时刻发生在夜里）。
+- **柔和配色**：低饱和的鼠尾草绿 + 暖灰，尽量不刺激情绪。
 
-### 第一步：创建 GitHub 仓库
+## 部署到 GitHub Pages
 
-1. 注册并登录 [github.com](https://github.com)
-2. 点击右上角 **+ → New repository**
-3. 填写仓库名（例如 `my-blog`），选择 **Public**
-4. 点击 **Create repository**
+把本站所有文件上传到仓库根目录，然后在仓库 **Settings → Pages**：
 
-### 第二步：上传博客文件
+- Source：`Deploy from a branch`
+- Branch：`main`，文件夹 `/ (root)`
+- 保存后等待 1–2 分钟即可访问 `https://你的用户名.github.io/仓库名/`
 
-仓库创建后，把 `blog/` 里的**所有内容**（不是 `blog` 文件夹本身，是它内部的文件）上传到仓库根目录。
+之后每次 `git push` 到 `main`，GitHub Pages 会自动重新发布。
 
-**方式 A — 网页上传（最简单，无需安装 Git）：**
-1. 进入仓库，点击 **Add file → Upload files**
-2. 把 `index.html`、`style.css`、`script.js`、`404.html`、`.nojekyll`、`README.md` 和 `articles/` 文件夹拖进去
-3. 点击 **Commit changes**
+## 内容维护与更新
 
-**方式 B — 命令行上传（需要安装 Git）：**
-```bash
-cd 博客所在目录          # 即存放 index.html 的目录
-git init
-git add .
-git commit -m "init blog"
-git branch -M main
-git remote add origin https://github.com/你的用户名/my-blog.git
-git push -u origin main
-```
+- **新增工具页**：复制一个现有工具页，改标题与内容，在 `index.html` 的工具卡片网格里加一个条目即可。
+- **热线信息**：请定期核实在线热线（如 12356 / 12355 / 400-161-9995 等）的最新官方信息。
 
-### 第三步：开启 GitHub Pages
+## 免责声明
 
-1. 回到仓库页面，进入 **Settings**
-2. 左侧菜单选择 **Pages**
-3. **Source（Build and deployment）** 选择 **Deploy from a branch**
-4. **Branch** 选择 `main`，文件夹选择 `/ (root)`
-5. 点击 **Save**
-
-等待 1–2 分钟后，你的博客就上线了：
-
-```
-https://你的用户名.github.io/my-blog/
-```
-
-之后每次 `git push` 到 `main` 分支，GitHub Pages 都会自动重新构建发布。
-
----
-
-## ✨ 可选增强
-
-- **绑定自定义域名**：购买域名后，在仓库 Settings → Pages 的 **Custom domain** 填入域名，并把 `.nojekyll` 同目录下的 `CNAME` 文件内容改为你的域名。同时在域名服务商处添加一条 CNAME 记录指向 `你的用户名.github.io`。
-- **备用部署位置**：也可以把文件放到仓库里的 `docs/` 文件夹，然后在 Pages 设置里选择分支 + 文件夹 `/docs`。
-- **多篇文章组织**：直接在 `articles/` 里复制一份现有文章，改标题和内容，再在 `index.html` 首页手动画卡新增条目即可。
-
----
-
-© 2025 山月集 · 用文字对抗遗忘
+本站所有内容均为一般性的心理教育与自助材料，**不构成医疗建议，不用于诊断、治疗或预防任何疾病**，也不能替代执业医师、心理治疗师或精神科医生的专业判断。遇到紧急危机时，请第一时间拨打求助热线或前往急诊。
