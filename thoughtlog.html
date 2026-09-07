@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>想法记录 · 心屿</title>
+  <meta name="description" content="想法记录表：用认知行为疗法（CBT）的方法，把引发情绪的自动想法写下来，识别认知扭曲，重评为更平衡的看法。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">心屿</a>
+      <div class="nav-links">
+        <a href="index.html">工具箱</a>
+        <a href="resources.html">求助资源</a>
+        <a href="about.html">关于</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+    </nav>
+  </header>
+
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
+
+  <main class="container tool-page">
+    <span class="page-tag">🔍 想法记录</span>
+    <h1>把脑子里的念头，摆到纸上</h1>
+    <p class="lead">很多时候，让我们难受的不是事情本身，而是它在我们脑子里激起的那句"自动想法"——"我肯定不行""大家都不喜欢我"。这个工具借用认知行为疗法（CBT）的方法，帮你把想法写下来、看清它、再重评为更平衡的看法。写下来，往往就从"一团乱麻"变成了"可以直视的文字"。</p>
+
+    <h2>先了解：什么是"自动想法"</h2>
+    <p>当一件事发生时，脑子里会像弹幕一样飞快蹦出很多念头，往往快到我们甚至没察觉。这些就是<strong>自动想法</strong>。它们不一定是事实，但会强烈影响我们的情绪。想法记录的第一步，就是把它们"抓"住并写下来。</p>
+
+    <div class="callout note">
+      <span class="label">它是什么、不是什么</span>
+      <p>想法记录是看清自己的工具，<strong>不是自我审判</strong>。写错、写得难看都没关系——这个页面只有你自己看得到，你的所有记录只会保存在你自己的浏览器里。</p>
+    </div>
+
+    <h2>开始记录</h2>
+    <p>找一个安静的片刻，回想最近一件让你比较难受的事（不必是大事）。按下面的步骤填，一步步来，填到哪算哪。</p>
+
+    <div class="recorder">
+      <!-- Step 1 情境 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">1</span>情境</div>
+        <p class="step-hint">发生了什么事？在不评判的前提下，用"看到/听到/发生"的句式客观描述。例："开会时，同事看了我一眼。"</p>
+        <label class="lbl" for="f-situation">具体发生了什么</label>
+        <textarea id="f-situation" rows="2" placeholder=" 例：领导让我发言，我愣了一下"></textarea>
+      </div>
+
+      <!-- Step 2 自动想法 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">2</span>自动想法</div>
+        <p class="step-hint">当时脑海里冒出了什么念头？可能不止一个，都写下来，哪怕它听起来夸张或不理智。例如："我肯定搞砸了""大家一定在笑我""我是个失败者"。</p>
+        <label class="lbl" for="f-thought">当时我脑子里在想</label>
+        <textarea id="f-thought" rows="3" placeholder=" 例：我肯定搞砸了，大家一定在心里笑话我"></textarea>
+      </div>
+
+      <!-- Step 3 情绪 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">3</span>情绪与强度</div>
+        <p class="step-hint">这种感觉有多强烈？0 是完全不，10 是难以承受。先记录"现在"的程度，重评后我们会再比一次。</p>
+
+        <div class="feel-row">
+          <label class="lbl" for="f-feel-name">哪种情绪（可填空）</label>
+          <input type="text" id="f-feel-name" placeholder=" 例：焦虑 / 挫败 / 难过" style="flex:1">
+        </div>
+
+        <div class="feel-row">
+          <label class="lbl" for="f-score">强度（0–10）</label>
+          <input type="range" id="f-score" min="0" max="10" value="5" step="1">
+          <span class="feel-val" id="f-score-val">5</span>
+        </div>
+      </div>
+
+      <!-- Step 4 认知扭曲 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">4</span>可能存在的认知扭曲</div>
+        <p class="step-hint">下面这些是常见"思维陷阱"。看看你的自动想法里，有没有命中其中一两种（可多选）。勾选不意味着你有问题——几乎所有人都会有一些，看清它就是改变的开始。</p>
+        <div id="distort-list"></div>
+      </div>
+
+      <!-- Step 5 重评 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">5</span>更平衡的看法</div>
+        <p class="step-hint">现在，试着用一个更宽容、更接近事实的角度，改写那句话。可以这样开头："我此刻的感觉很真实，但是……"或"其实更可能是……"不要求积极乐观，只要求<strong>平衡真实</strong>。例："我的确紧张了，但每个人发言都可能紧张，一次发言不能定义我。"</p>
+        <label class="lbl" for="f-rethink">如果对一位朋友说，我会怎么讲</label>
+        <textarea id="f-rethink" rows="3" placeholder=" 例：我真的紧张了，但一次发言不能定义我这个人，大家没有证据在笑话我"></textarea>
+      </div>
+
+      <!-- Step 6 情绪再打分 -->
+      <div class="recorder-step">
+        <div class="step-label"><span class="num">6</span>重评后再看看情绪</div>
+        <p class="step-hint">重新给你的情绪强度打分（0–10）。通常写完更平衡的看法后，它会有一些变化——无论结果如何，都是宝贵的信息。</p>
+        <div class="feel-row">
+          <label class="lbl" for="f-score2">强度（0–10）</label>
+          <input type="range" id="f-score2" min="0" max="10" value="5" step="1">
+          <span class="feel-val" id="f-score2-val">5</span>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button class="btn" id="btn-save">保存这次记录</button>
+        <button class="btn ghost" id="btn-reset" style="margin-left:10px;">清空表单</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result" style="display:none;"></div>
+
+    <!-- History -->
+    <h2>我的历史记录</h2>
+    <p style="color:var(--text-muted);font-size:0.9rem;">你的记录只保存在这台设备的浏览器里，不会上传到任何服务器。过段时间回看，往往能看到自己的变化。</p>
+    <div class="history-list" id="history"></div>
+
+    <div class="callout seek-help">
+      <span class="label">如果这些没有让事情变好</span>
+      <p>想法记录是很有效的自助工具，但它不能替代专业帮助。如果负面想法反复出现、持续很久，或伴随自伤、自杀的念头，请务必联系心理援助热线或就医，你值得被认真对待。<a href="resources.html">看看求助资源</a>。</p>
+    </div>
+
+    <a class="back-home" href="index.html">← 回到工具箱</a>
+  </main>
+
+  <footer class="site-footer">
+    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习方法参考自认知行为疗法（CBT）自助材料（如《伯恩斯新情绪疗法》）。紧急危机请拨打热线或就医。</p>
+    <p style="margin-top:6px;">© 2025 心屿</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function () {
+    var LS_KEY = "xinyu-thoughtlog";
+    var history = [];
+    try {
+      history = JSON.parse(localStorage.getItem(LS_KEY) || "[]");
+    } catch (e) { history = []; }
+
+    // --- 认知扭曲清单 ---
+    var distortions = [
+      { name: "非黑即白", desc: "非好即坏，没有中间地带。例：\"要么完美，要么彻底失败。\"" },
+      { name: "过度概括", desc: "一次不好的经历，就推断成永远如此。例：\"这次不行，我以后都不行。\"" },
+      { name: "心理过滤", desc: "只盯着消极的一面，忽略积极的部分。" },
+      { name: "否定正面", desc: "把好事归因于运气或偶然，而不是自己的能力。" },
+      { name: "妄下结论", desc: "没有证据就下判断（读心：认为别人在想自己；算命：断言坏事会发生）。" },
+      { name: "放大或缩小", desc: "把困难灾难化，把自己的优点或努力缩小。" },
+      { name: "情绪化推理", desc: "因为\"我感觉很糟\"，就认定\"事情真的很糟\"。" },
+      { name: "应该句式", desc: "用\"我应该/我必须\"苛责自己，产生压力和愧疚。" },
+      { name: "贴标签", desc: "用一个标签概括自己：\"我是个没用的人\"。" },
+      { name: "个人化", desc: "把不属于自己的责任揽到自己身上：\"都是我的错\"。" }
+    ];
+
+    // --- 渲染认知扭曲选项 ---
+    var dl = document.getElementById("distort-list");
+    distortions.forEach(function (d, i) {
+      var el = document.createElement("label");
+      el.className = "distort";
+      el.innerHTML =
+        '<input type="checkbox" data-idx="' + i + '">' +
+        '<div><div class="d-name">' + d.name + '</div><div class="d-desc">' + d.desc + '</div></div>';
+      el.addEventListener("click", function () {
+        el.classList.toggle("checked", el.querySelector("input").checked);
+      });
+      dl.appendChild(el);
+    });
+
+    // --- 情绪滑杆联动 ---
+    function bindSlider(sliderId, valId) {
+      var s = document.getElementById(sliderId);
+      var v = document.getElementById(valId);
+      s.addEventListener("input", function () { v.textContent = s.value; });
+    }
+    bindSlider("f-score", "f-score-val");
+    bindSlider("f-score2", "f-score2-val");
+
+    // --- 输入自动保存草稿 ---
+    var fields = ["f-situation", "f-thought", "f-feel-name", "f-rethink"];
+    var sliders = ["f-score", "f-score2"];
+    (function loadDraft() {
+      try {
+        var d = JSON.parse(localStorage.getItem("xinyu-draft") || "{}");
+        fields.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && d[id] !== undefined) el.value = d[id];
+        });
+        sliders.forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el && d[id] !== undefined) el.value = d[id];
+          document.getElementById(id + "-val").textContent = el.value;
+        });
+      } catch (e) {}
+    })();
+    function saveDraft() {
+      var d = {};
+      fields.forEach(function (id) { d[id] = document.getElementById(id).value; });
+      sliders.forEach(function (id) { d[id] = document.getElementById(id).value; });
+      localStorage.setItem("xinyu-draft", JSON.stringify(d));
+    }
+    fields.forEach(function (id) {
+      document.getElementById(id).addEventListener("input", saveDraft);
+    });
+    sliders.forEach(function (id) {
+      document.getElementById(id).addEventListener("input", saveDraft);
+    });
+
+    // --- 保存记录 ---
+    var resultBox = document.getElementById("result");
+    document.getElementById("btn-save").addEventListener("click", function () {
+      var situation = document.getElementById("f-situation").value.trim();
+      var thought = document.getElementById("f-thought").value.trim();
+      var feelName = document.getElementById("f-feel-name").value.trim();
+      var score1 = document.getElementById("f-score").value;
+      var score2 = document.getElementById("f-score2").value;
+      var rethink = document.getElementById("f-rethink").value.trim();
+
+      // 选中的扭曲
+      var checked = [];
+      dl.querySelectorAll("input:checked").forEach(function (c) {
+        checked.push(distortions[parseInt(c.getAttribute("data-idx"))].name);
+      });
+
+      if (!thought && !situation) {
+        alert("至少填写一下情境或自动想法，才能保存哦。");
+        return;
+      }
+
+      var rec = {
+        time: new Date().toLocaleString("zh-CN"),
+        situation: situation,
+        thought: thought,
+        feelName: feelName,
+        checked: checked,
+        rethink: rethink,
+        score1: parseInt(score1),
+        score2: parseInt(score2)
+      };
+      history.unshift(rec);
+      localStorage.setItem(LS_KEY, JSON.stringify(history));
+
+      // 显示结果
+      var delta = rec.score1 - rec.score2;
+      var deltaText = delta > 0 ? ("下降了 " + delta + " 分") : (delta === 0 ? "没有变化" : "上升了 " + Math.abs(delta) + " 分");
+      resultBox.style.display = "block";
+      resultBox.innerHTML =
+        '<div class="result-block">' +
+          '<h3>已完成一次记录</h3>' +
+          '<div class="row"><span class="k">情境：</span>' + esc(rec.situation) + '</div>' +
+          '<div class="row"><span class="k">自动想法：</span>' + esc(rec.thought) + '</div>' +
+          (rec.checked.length ? '<div class="row"><span class="k">可能存在的扭曲：</span>' + esc(rec.checked.join("、")) + '</div>' : '') +
+          '<div class="row"><span class="k">更平衡的看法：</span>' + esc(rec.rethink) + '</div>' +
+          '<div class="score-compare">' +
+            '<div>重评前<br><span class="big">' + rec.score1 + '</span></div>' +
+            '<div>重评后<br><span class="big">' + rec.score2 + '</span></div>' +
+            '<div style="align-self:flex-end;">情绪强度<span class="delta">' + deltaText + '</span></div>' +
+          '</div>' +
+          '<p style="margin:0;font-size:0.85rem;color:var(--text-muted);">写下来本身，就是在把情绪交还给理智。为自己做了这一步，很棒。</p>' +
+        '</div>';
+      renderHistory();
+      alert("已保存！可以在下方看到你的记录。");
+    });
+
+    // --- 清空 ---
+    document.getElementById("btn-reset").addEventListener("click", function () {
+      if (!confirm("确定清空当前表单吗？（历史记录不会删除）")) return;
+      fields.forEach(function (id) { document.getElementById(id).value = ""; });
+      document.getElementById("f-score").value = 5;
+      document.getElementById("f-score2").value = 5;
+      document.getElementById("f-score-val").textContent = 5;
+      document.getElementById("f-score2-val").textContent = 5;
+      dl.querySelectorAll("input:checked").forEach(function (c) { c.checked = false; });
+      dl.querySelectorAll(".distort.checked").forEach(function (el) { el.classList.remove("checked"); });
+      resultBox.style.display = "none";
+      saveDraft();
+    });
+
+    // --- 渲染历史 ---
+    function esc(s) {
+      var d = document.createElement("div");
+      d.textContent = (s === undefined || s === null) ? "" : String(s);
+      return d.innerHTML;
+    }
+    function renderHistory() {
+      var h = document.getElementById("history");
+      if (!history.length) {
+        h.innerHTML = '<div class="empty-hint">还没有记录。等你准备好写第一条时，这里会出现它。</div>';
+        return;
+      }
+      h.innerHTML = history.map(function (r, i) {
+        return '<div class="history-item">' +
+          '<div class="h-time">' + esc(r.time) + ' &nbsp; 情绪 ' + r.score1 + ' → ' + r.score2 + '</div>' +
+          '<div class="h-thought">💭 ' + esc(r.thought) + '</div>' +
+          (r.rethink ? '<div class="h-rethink">✓ ' + esc(r.rethink) + '</div>' : '') +
+          '</div>';
+      }).join("");
+    }
+    renderHistory();
+  })();
+  </script>
+</body>
+</html>

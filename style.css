@@ -350,6 +350,162 @@ body.dark .site-header {
   margin: 0 auto;
 }
 
+/* ---------- Interactive form (M7 thought log) ---------- */
+.recorder {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 8px;
+  margin: 20px 0 32px;
+  box-shadow: var(--shadow);
+}
+.recorder-step {
+  padding: 22px 24px;
+  border-top: 1px dashed var(--border);
+}
+.recorder-step:first-child { border-top: none; }
+.recorder-step .step-label {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.recorder-step .step-label .num {
+  display: inline-flex;
+  min-width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  border-radius: 50%;
+  font-size: 0.85rem;
+}
+.recorder-step .step-hint { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 12px; }
+
+.recorder label.lbl {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 14px 0 6px;
+}
+.recorder input[type=text],
+.recorder textarea,
+.recorder select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+.recorder textarea { resize: vertical; min-height: 64px; }
+.recorder input[type=text]:focus,
+.recorder textarea:focus,
+.recorder select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.recorder .feel-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 4px;
+}
+.recorder .feel-row label.lbl { margin: 0; white-space: nowrap; }
+.recorder input[type=range] { flex: 1; accent-color: var(--accent); }
+.recorder .feel-val {
+  min-width: 34px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.distort {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: var(--bg);
+  transition: border-color 0.15s, background 0.15s;
+}
+.distort:hover { border-color: var(--accent); }
+.distort input { margin-top: 4px; accent-color: var(--accent); }
+.distort .d-name { font-weight: 600; font-size: 0.95rem; }
+.distort .d-desc { color: var(--text-muted); font-size: 0.85rem; margin-top: 2px; }
+.distort.checked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.recorder .actions { padding: 20px 24px; text-align: center; border-top: 1px dashed var(--border); }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+body.dark .btn { color: #10201a; }
+.btn:hover { opacity: 0.88; }
+.btn.ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.result-block {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 20px 0;
+}
+.result-block h3 { color: var(--accent-deep); margin-bottom: 10px; }
+.result-block .row { margin-bottom: 8px; font-size: 0.95rem; }
+.result-block .row .k { color: var(--text-muted); }
+.result-block .score-compare {
+  display: flex;
+  gap: 24px;
+  margin: 12px 0;
+  font-size: 0.95rem;
+}
+.result-block .score-compare .big { font-size: 1.6rem; font-weight: 700; color: var(--accent-deep); }
+.result-block .delta { font-weight: 700; color: var(--accent-deep); margin-left: 4px; }
+
+.history-list { margin-top: 16px; }
+.history-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+.history-item .h-time { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 6px; }
+.history-item .h-thought {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.history-item .h-rethink { color: var(--accent-deep); }
+.empty-hint { color: var(--text-muted); font-size: 0.9rem; text-align: center; padding: 20px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .hero { padding: 60px 0 28px; }
