@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山月集 · 个人博客</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">山月集</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">首页</a>
+        <a href="about.html">关于</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>你好，我是<span class="accent">山月</span></h1>
+      <p class="tagline">在这里记录代码、生活与思考。</p>
+    </section>
+
+    <section class="posts">
+      <h2 class="section-title">最新文章</h2>
+
+      <article class="post-card">
+        <div class="post-meta"><span class="post-date">2025-05-18</span><span class="post-tag">随笔</span></div>
+        <h3 class="post-title"><a href="articles/first-post.html">写给我的第一篇文章：把日子过成诗</a></h3>
+        <p class="post-excerpt">为什么要开始写博客？一是为了记录，二是为了思考。写作的本质，是让模糊的想法变得清晰。</p>
+        <a class="post-more" href="articles/first-post.html">阅读全文 →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-meta"><span class="post-date">2025-04-02</span><span class="post-tag">技术</span></div>
+        <h3 class="post-title"><a href="articles/build-blog.html">手把手搭建一个纯静态博客</a></h3>
+        <p class="post-excerpt">不需要复杂的框架，一个 HTML 文件加上一点 CSS 和 JavaScript，就能拥有一个干净清爽的个人网站。</p>
+        <a class="post-more" href="articles/build-blog.html">阅读全文 →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-meta"><span class="post-date">2025-02-11</span><span class="post-tag">读书</span></div>
+        <h3 class="post-title"><a href="articles/reading-notes.html">最近在读：慢下来的力量</a></h3>
+        <p class="post-excerpt">在这个什么都求快的时代，学会慢下来，反而是一种稀缺的能力。分享几本关于「慢生活」的书。</p>
+        <a class="post-more" href="articles/reading-notes.html">阅读全文 →</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 山月集 · 用文字对抗遗忘</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
