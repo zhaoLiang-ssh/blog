@@ -767,3 +767,17 @@ h2 { scroll-margin-top: 90px; }
   .logo { font-size: 1.05rem; }
   .nav-links a { margin-left: 12px; font-size: 0.85rem; }
 }
+
+/* ---------- 宽屏 (大屏桌面, 如 1920x1080) ---------- */
+@media (min-width: 1200px) {
+  .tool-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1400px) {
+  :root { --max-w: 1020px; }
+  .hero { padding: 108px 0 56px; }
+  .hero h1 { font-size: 2.9rem; }
+}
+@media (min-width: 1800px) {
+  :root { --max-w: 1160px; }
+  .hero h1 { font-size: 3.1rem; }
+}
