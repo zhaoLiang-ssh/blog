@@ -625,6 +625,73 @@ body.dark .btn { color: #10201a; }
 }
 .action-progress .p-text { font-size: 0.82rem; color: var(--text-muted); margin-top: 6px; text-align: right; }
 
+/* ---------- Book TOC sidebar (延伸阅读目录) ---------- */
+.book-toc {
+  position: fixed;
+  top: 120px;
+  right: 24px;
+  width: 200px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 12px;
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+}
+.book-toc h4 {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+.book-toc a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px 6px;
+  border-radius: 6px;
+  line-height: 1.4;
+  transition: background 0.15s, color 0.15s;
+}
+.book-toc a:hover { background: var(--accent-soft); color: var(--accent-deep); }
+.book-toc a.sec { color: var(--text-muted); font-size: 0.8rem; margin-top: 4px; }
+/* 平滑滚动 + 锚点补偿 header */
+html { scroll-behavior: smooth; }
+.step { scroll-margin-top: 90px; }
+h2 { scroll-margin-top: 90px; }
+/* 窄屏隐藏侧栏目录，改为页内顶部目录链接放于正文之上 */
+@media (max-width: 1240px) {
+  .book-toc { display: none; }
+}
+
+/* 页内折叠目录（窄屏） */
+.book-toc-inline {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0 0 24px;
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+}
+.book-toc-inline summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.book-toc-inline .inline-links { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; margin-top: 10px; }
+.book-toc-inline a { text-decoration: none; color: var(--text); padding: 3px 4px; border-radius: 5px; }
+.book-toc-inline a:hover { color: var(--accent-deep); background: var(--accent-soft); }
+@media (min-width: 1241px) {
+  .book-toc-inline { display: none; }
+}
+
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .hero { padding: 60px 0 28px; }
