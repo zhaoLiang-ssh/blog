@@ -29,7 +29,7 @@
     </nav>
   </header>
 
-  <div class="crisis-bar">
+  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
     请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
   </div>
@@ -45,7 +45,7 @@
     <h2>添加今天的第一个小行动</h2>
     <div class="action-space">
       <div class="action-input">
-        <input type="text" id="new-action" placeholder=" 例：把杯子放到水槽 / 站起来走 3 步 / 给一个朋友发句'在吗'">
+        <input type="text" id="new-action" aria-label="新增一条小行动" placeholder=" 例：把杯子放到水槽 / 站起来走 3 步 / 给一个朋友发句'在吗'">
         <button class="btn" id="btn-add">添加</button>
       </div>
 
@@ -70,7 +70,7 @@
     <h2>行动-心情小记录</h2>
     <p style="color:var(--text-muted);font-size:0.92rem;">做完几个动作后，感觉如何？一句话记下来，回头能看到自己的变化。（保存在本机）</p>
     <div class="action-space">
-      <textarea id="mood-note" rows="2" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:0.95rem;resize:vertical;min-height:56px;" placeholder=" 例：今天走了 10 分钟，虽然还是提不起劲，但比躺着不动感觉好一点。"></textarea>
+      <textarea id="mood-note" aria-label="记录此刻心情" rows="2" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:0.95rem;resize:vertical;min-height:56px;" placeholder=" 例：今天走了 10 分钟，虽然还是提不起劲，但比躺着不动感觉好一点。"></textarea>
       <div style="text-align:center;margin-top:12px;"><button class="btn" id="btn-mood-save">保存心情记录</button></div>
       <div id="mood-history" style="margin-top:12px;"></div>
     </div>
