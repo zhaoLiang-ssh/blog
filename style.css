@@ -328,13 +328,21 @@ body.dark .logo::before { color: #10201a; }
   padding-bottom: 80px;
 }
 .tool-page .page-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   background: var(--accent-soft);
   color: var(--accent-deep);
-  padding: 3px 12px;
+  padding: 4px 14px 4px 10px;
   border-radius: 20px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
+  font-weight: 600;
   margin-bottom: 14px;
+}
+.tool-page .page-tag svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
 }
 .tool-page h1 { font-size: 2rem; margin-bottom: 10px; }
 .tool-page .lead { color: var(--text-muted); margin-bottom: 32px; }
