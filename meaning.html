@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>意义感 · 心屿</title>
+  <meta name="description" content="意义感练习：在迷茫与低谷中，温和地寻找'此刻活下去'的那一点意义。参考意义疗法（Logotherapy）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">心屿</a>
+      <div class="nav-links">
+        <a href="index.html">工具箱</a>
+        <a href="resources.html">求助资源</a>
+        <a href="about.html">关于</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+    </nav>
+  </header>
+
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
+
+  <main class="container tool-page">
+    <span class="page-tag">🌅 意义感</span>
+    <h1>找不到方向时，就从脚下的意义开始</h1>
+    <p class="lead">"活着到底是为了什么？"——每个人在低谷里都可能问过自己。意义疗法（Logotherapy）的创始人弗兰克尔在集中营的绝境中领悟到：人不能选择自己的处境，但永远可以选择<strong>面对处境的态度</strong>。意义不一定宏大，它可以就在此刻、很小、很具体。</p>
+
+    <h2>意义可能来自三个地方</h2>
+    <div class="step">
+      <div class="step-title">① 创造（做一件事、完成一个作品）</div>
+      <p>投身于一件能创造价值的事——工作、手艺、帮助别人、写下一段文字。创造让"我"参与进世界。</p>
+    </div>
+    <div class="step">
+      <div class="step-title">② 体验（相遇、感受、爱）</div>
+      <p>去体验世界：爱一个人、与朋友相处、看一场日出、为一本书动容。体验让世界走进"我"。</p>
+    </div>
+    <div class="step">
+      <div class="step-title">③ 态度（如何面对不可改变的苦难）</div>
+      <p>有些苦难无法避免，但我们可以选择如何承受它——这种"活着且不放弃"的姿态本身，就有尊严与意义。</p>
+    </div>
+
+    <div class="callout note">
+      <span class="label">一声温和的提醒</span>
+      <p>意义感不需要靠"想通"获得，更多时候是靠"迈出一步"遇到。如果你此刻觉得一切都无意义，请先不要急着批判自己——<strong>连"不知道意义在哪"都可以是寻找的开始</strong>。这个页面不给你答案，只陪你走一小段。</p>
+    </div>
+
+    <h2>一个当下的练习：找到"此刻的意义"</h2>
+    <p>不需要想"一生的意义"那么大，从下面三个方向里，各找一个你能想到的、小小的、此刻的答案。写下来就好。</p>
+
+    <div class="selfcomp">
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">1</span>为了谁 / 为了什么，我愿意多撑一天</div>
+        <p>也许是一个人，也许是一件没做完的事，也许是一只你照料的动物。写下来。（哪怕很平凡）</p>
+        <textarea id="mn-for" rows="2" placeholder=" 例：为了我的家人 / 为了照顾好我的猫 / 为了写完这本日记"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">2</span>一件我想去创造的</div>
+        <p>可以很小：做一顿饭、学一样东西、帮助一个陌生人、整理房间。</p>
+        <textarea id="mn-create" rows="2" placeholder=" 例：学做一道菜 / 帮邻居搬一次东西 / 写一封信给老朋友"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">3</span>一件我想去体验的</div>
+        <p>去看、去听、去感受：一场日出、一条没走过的路、一本书、一次散步。</p>
+        <textarea id="mn-exp" rows="2" placeholder=" 例：去看一次海 / 走一条没走过的路 / 安静地喝完一杯茶"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">4</span>今天就能做的最小一件事</div>
+        <p>从上面挑一个，拆成今天就能做的最小一步。留意它"小到几乎不会失败"。</p>
+        <textarea id="mn-act" rows="2" placeholder=" 例：今晚去楼下走 5 分钟 / 泡一杯茶，不看手机"></textarea>
+      </div>
+
+      <div class="selfcomp-actions">
+        <button class="btn" id="btn-mn-save">把这一小步，交给今天的我</button>
+      </div>
+    </div>
+
+    <div id="mn-result" style="display:none;"></div>
+
+    <h2>一段话，送给在找意义的你</h2>
+    <blockquote>
+      "生命的意义不是被给予的，而是被我们<strong>追问</strong>出来的。重要的不是我们期待生命给我什么，而是生命期待我们从这一时刻的这一处境中活出什么。"
+    </blockquote>
+    <p style="color:var(--text-muted);font-size:0.9rem;">—— 参考自维克多·弗兰克尔《活出生命的意义》之精神（非原文直引）</p>
+
+    <div class="callout seek-help">
+      <span class="label">如果无意义感挥之不去</span>
+      <p>长期、持续地觉得"活着没意义、一切都不值得"，并且伴随情绪低落、绝望或自伤念头——这不只是"想不开"，它可能和情绪健康有关，值得认真对待。请务必联系心理援助热线或就医，<strong>你不需要独自寻找意义</strong>。<a href="resources.html">看看求助资源</a>。</p>
+    </div>
+
+    <a class="back-home" href="index.html">← 回到工具箱</a>
+  </main>
+
+  <footer class="site-footer">
+    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习理念参考自意义疗法（Logotherapy，弗兰克尔《活出生命的意义》）。紧急危机请拨打热线或就医。</p>
+    <p style="margin-top:6px;">© 2025 心屿</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function () {
+    var LS_KEY = "xinyu-meaning";
+    document.getElementById("btn-mn-save").addEventListener("click", function () {
+      function v(id) { return document.getElementById(id).value.trim(); }
+      var act = v("mn-act"), forw = v("mn-for"), cre = v("mn-create"), exp = v("mn-exp");
+      if (!act && !forw && !cre && !exp) {
+        alert("至少写下一点，练习才算开始哦。");
+        return;
+      }
+      try {
+        localStorage.setItem(LS_KEY, JSON.stringify({
+          time: new Date().toLocaleString("zh-CN"),
+          act: act || forw || cre || exp
+        }));
+      } catch (e) {}
+
+      var box = document.getElementById("mn-result");
+      box.style.display = "block";
+      var line = act || forw || cre || exp;
+      box.innerHTML = '<div class="result-block"><h3>你为今天留下了一个方向</h3>' +
+        '<p style="font-size:1.05rem;font-style:italic;">「' + esc(line) + '」</p>' +
+        '<p style="margin:0;font-size:0.88rem;color:var(--text-muted);">不必立即相信它有意义。先去做一点，意义有时是走着走着，自己显出来的。</p></div>';
+
+      ["mn-for","mn-create","mn-exp","mn-act"].forEach(function (id) {
+        document.getElementById(id).value = "";
+      });
+    });
+    function esc(s) {
+      var d = document.createElement("div");
+      d.textContent = (s === undefined || s === null) ? "" : String(s);
+      return d.innerHTML;
+    }
+  })();
+  </script>
+</body>
+</html>

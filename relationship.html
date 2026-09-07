@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关系修复 · 心屿</title>
+  <meta name="description" content="关系修复练习：用非暴力沟通（NVC）的观察、感受、需要、请求四要素，把指责改写成真诚的表达。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">心屿</a>
+      <div class="nav-links">
+        <a href="index.html">工具箱</a>
+        <a href="resources.html">求助资源</a>
+        <a href="about.html">关于</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+    </nav>
+  </header>
+
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
+
+  <main class="container tool-page">
+    <span class="page-tag">💬 关系修复</span>
+    <h1>把一句指责，改成一次靠近</h1>
+    <p class="lead">关系里最伤人的，往往是把"事情"说成了"对人"。非暴力沟通（NVC）提供了一个简单框架：用<strong>观察、感受、需要、请求</strong>四个步骤，把"你怎么老是这样"改写成"我看到……我感到……因为我需要……你能否……"。同样的意思，换一种说法，距离就拉近了。</p>
+
+    <h2>第一步：先别在情绪高峰沟通</h2>
+    <p>当冲突发生、双方都在气头上时，大脑会进入"战斗/逃跑"模式，这时候说什么都可能被误解。给自己和对方一点冷静的时间。非暴力沟通不是要在最激动的时候硬用，而是在情绪稍微平稳后，把想说的话好好说出来。</p>
+
+    <h2>非暴力沟通的四要素</h2>
+    <div class="step">
+      <div class="step-title">① 观察（说出事实，不评判）</div>
+      <p>只描述你看到的、听到的具体事实，不加"总是""从不""很懒"这类评价。例："这周你有三天晚上 11 点之后回家。"（而不是"你天天不着家"）</p>
+    </div>
+    <div class="step">
+      <div class="step-title">② 感受（表达真实情绪）</div>
+      <p>说出这件事带给你的感受。例："我感到有些孤单和担心。"</p>
+    </div>
+    <div class="step">
+      <div class="step-title">③ 需要（说出背后的需要）</div>
+      <p>感受通常来自一个未被满足的需要。例："因为我需要一些陪伴和被在乎的感觉。"</p>
+    </div>
+    <div class="step">
+      <div class="step-title">④ 请求（提出具体、可执行的请求）</div>
+      <p>提出一个具体的、正面表达的请求，而不是命令或抱怨。例："你能否下次要晚回时，提前发消息告诉我？"</p>
+    </div>
+
+    <div class="callout note">
+      <span class="label">连成一个完整的句子</span>
+      <p>把四步连起来，就成了一句完整的表达：<br><em>"当你（观察），我感到（感受），因为我需要（需要），你能否（请求）？"</em><br>句式是工具，不是咒语——真诚比完美更重要。</p>
+    </div>
+
+    <h2>一个当下就能做的改写练习</h2>
+    <p>回想一句你常说、或别人对你说的、带评判和指责的话，试着用非暴力沟通的四要素把它改写。这个练习可以帮助你在真正开口前先理清自己。</p>
+
+    <div class="selfcomp">
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">1</span>原本那句带情绪的话</div>
+        <p>写下你本来想说的是什么（不用修饰，怎么想就怎么写）。</p>
+        <textarea id="nv-orig" rows="2" placeholder=" 例：你怎么老是这么晚才回家，一点都不在乎这个家"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">2</span>✍️ 观察 · 事实</div>
+        <p>改成客观描述：发生了什么？（去掉"总是/从不/懒"等评价）</p>
+        <textarea id="nv-obs" rows="2" placeholder=" 例：这周你有三个晚上在 11 点之后才回家"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">3</span>💛 感受 · 情绪</div>
+        <p>这件事让你感到什么？（表达自己的情绪，而非指责对方）</p>
+        <textarea id="nv-feel" rows="2" placeholder=" 例：我感到有些孤单和担心"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">4</span>🌱 需要 · 背后的需要</div>
+        <p>这份感受背后，是你哪个需要没被满足？</p>
+        <textarea id="nv-need" rows="2" placeholder=" 例：因为我需要被陪伴、被在乎的感觉"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">5</span>🙏 请求 · 具体可执行</div>
+        <p>你希望对方具体怎么做？（正面、可执行的）</p>
+        <textarea id="nv-req" rows="2" placeholder=" 例：你下次要晚归时，能否提前发个消息告诉我？"></textarea>
+      </div>
+
+      <div class="selfcomp-actions">
+        <button class="btn" id="btn-nv-compose">生成完整表达</button>
+      </div>
+    </div>
+
+    <div id="nv-result" style="display:none;"></div>
+
+    <div class="callout seek-help">
+      <span class="label">分清"修复"与"该设边界"</span>
+      <p>非暴力沟通是改善健康关系的工具，但它绝不是让你忍受伤害。如果一段关系长期带来自我贬低、恐惧或伤害，那么你需要保护的不是关系，而是你自己。设置边界、甚至离开，都是对自己负责的表现。如有需要，<a href="resources.html">寻求专业支持</a>。</p>
+    </div>
+
+    <a class="back-home" href="index.html">← 回到工具箱</a>
+  </main>
+
+  <footer class="site-footer">
+    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本方法参考自非暴力沟通（NVC，《非暴力沟通》马歇尔·卢森堡）。紧急危机请拨打热线或就医。</p>
+    <p style="margin-top:6px;">© 2025 心屿</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function () {
+    var LS_KEY = "xinyu-nvc";
+    document.getElementById("btn-nv-compose").addEventListener("click", function () {
+      function v(id) { return document.getElementById(id).value.trim(); }
+      var obs = v("nv-obs"), feel = v("nv-feel"), need = v("nv-need"), req = v("nv-req");
+      if (!obs && !feel && !req) {
+        alert("至少写下观察或请求，才能生成完整表达哦。");
+        return;
+      }
+      // 组装完整句子（缺的部分就跳过）
+      var sentence = "当你" + (obs || "……") + "，我感到" + (feel || "……") +
+        (need ? "，因为我需要" + need : "") + (req ? "。你能否" + req + "？" : "。");
+      try {
+        localStorage.setItem(LS_KEY, JSON.stringify({ time: new Date().toLocaleString("zh-CN"), sentence: sentence }));
+      } catch (e) {}
+
+      var box = document.getElementById("nv-result");
+      box.style.display = "block";
+      box.innerHTML = '<div class="result-block"><h3>你的完整表达</h3>' +
+        '<p style="font-size:1.05rem;line-height:2;">「' + esc(sentence) + '」</p>' +
+        '<p style="margin:0;font-size:0.88rem;color:var(--text-muted);">开口前，可以先在心里对自己说一遍，感受一下。</p></div>';
+
+      ["nv-orig","nv-obs","nv-feel","nv-need","nv-req"].forEach(function (id) {
+        document.getElementById(id).value = "";
+      });
+    });
+    function esc(s) {
+      var d = document.createElement("div");
+      d.textContent = (s === undefined || s === null) ? "" : String(s);
+      return d.innerHTML;
+    }
+  })();
+  </script>
+</body>
+</html>
