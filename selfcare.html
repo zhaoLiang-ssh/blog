@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自我关怀 · 心屿</title>
+  <meta name="description" content="自我关怀练习：用善待自己的方式，替代内心那个苛刻的声音。参考自我关怀（Kristin Neff）理论。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">心屿</a>
+      <div class="nav-links">
+        <a href="index.html">工具箱</a>
+        <a href="resources.html">求助资源</a>
+        <a href="about.html">关于</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+    </nav>
+  </header>
+
+  <div class="crisis-bar">
+    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+    请立即拨打全国心理援助热线 <strong>12356</strong> 或北京心理危机干预热线 <strong>400-161-9995</strong>，也可以联系身边你信任的人。
+  </div>
+
+  <main class="container tool-page">
+    <span class="page-tag">🤍 自我关怀</span>
+    <h1>像对待朋友一样，对待自己</h1>
+    <p class="lead">我们常常对别人很温柔，却对自己很苛刻——心里有个声音不停地说"你不够好""都怪你""你怎么这样"。自我关怀，就是学着用对待好朋友的方式，对待那个正在受苦的自己。它不是自我放纵，而是一种真正善待自己的能力。</p>
+
+    <h2>自我关怀的三个部分</h2>
+    <div class="step">
+      <div class="step-title">① 善待自己（而不是苛责）</div>
+      <p>在难受的时候，选择安慰自己而不是责备自己。就像你会安慰一个摔倒的朋友："没关系的，你已经尽力了。"</p>
+    </div>
+    <div class="step">
+      <div class="step-title">② 共通人性（而不是孤立）</div>
+      <p>提醒自己：<strong>所有人都会失败、都会痛苦、都不完美</strong>。你并不孤独，这恰恰是"生而为人"的一部分，而不是你一个人独有的缺陷。</p>
+    </div>
+    <div class="step">
+      <div class="step-title">③ 正念（而不是过度认同）</div>
+      <p>温和地觉察自己的痛苦，不回避它，也不被它淹没。对痛苦说："此刻我很难受，我看见了。"</p>
+    </div>
+
+    <div class="callout note">
+      <span class="label">和"自我放纵"的区别</span>
+      <p>自我关怀不等于"随便放纵自己、纵容坏习惯"。它是在尊重自己长期幸福的前提下，用善意而非苛责推动自己。它的核心是"对自己好一点，因为你是值得的"。</p>
+    </div>
+
+    <h2>一个当下就能做的练习</h2>
+    <p>下面这个练习改编自自我关怀（Kristin Neff）的方法。找一个安静的时刻，试着做一次。写下来会有更好的效果——写完，轻轻地把这些话收进心里。</p>
+
+    <div class="selfcomp">
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">1</span>想起一件让你苛责自己的事</div>
+        <p>回想一件最近让你自责的事（比如搞砸了一次、疏忽了什么）。写下脑中那个"苛刻的声音"在说什么。</p>
+        <textarea id="sc-harsh" rows="2" placeholder=" 例：我又搞砸了，我真是个没用的人，别人都做得比我好"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">2</span>如果朋友这样对你说，你会怎么回应</div>
+        <p>想象你最好的朋友遇到了同样的事，也这样责怪自己。你会怎么安慰 TA？把你要对 TA 说的话写下来。</p>
+        <textarea id="sc-friend" rows="3" placeholder=" 例：没关系的，一次失误不代表你不好，你已经很努力了，我们都会有这样的时候"></textarea>
+      </div>
+
+      <div class="selfcomp-step">
+        <div class="step-label"><span class="num">3</span>把这句话，说给自己听</div>
+        <p>现在，试着把同样的善意转向自己。你不需要完全相信它，只需要<strong>试着对自己说</strong>。可以沿用上面的句式，也可以这样开头："我此刻很不好受，这是人之常情。我原谅我自己，我已经尽力了。"</p>
+        <textarea id="sc-self" rows="3" placeholder=" 例：我此刻很难受，但一次失误不能定义我。我和所有人一样，会犯错也会成长。我原谅自己，我已经尽力了。"></textarea>
+      </div>
+
+      <div class="selfcomp-actions">
+        <button class="btn" id="btn-sc-save">把这句话留给自己</button>
+      </div>
+    </div>
+
+    <div id="sc-result" style="display:none;"></div>
+
+    <div class="callout note">
+      <span class="label">一个日常小习惯</span>
+      <p>下次察觉到自己又在苛责自己时，试试停顿一秒，在心底问："如果是我在乎的人，我会对他说什么？" 然后，把这句话送给自己。积累这些微小的善意，会慢慢改变你和自己的关系。</p>
+    </div>
+
+    <div class="callout seek-help">
+      <span class="label">如果自我批判太沉重</span>
+      <p>如果心里那个苛刻的声音过于强烈、难以缓和，或长期伴随低落与无力，这不是你"不够坚强"——而是你需要更多帮助的信号。请别独自硬扛，<a href="resources.html">寻求专业支持</a>是爱自己的表现。</p>
+    </div>
+
+    <a class="back-home" href="index.html">← 回到工具箱</a>
+  </main>
+
+  <footer class="site-footer">
+    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习参考自自我关怀理论（Kristin Neff《自我关怀的力量》）。紧急危机请拨打热线或就医。</p>
+    <p style="margin-top:6px;">© 2025 心屿</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function () {
+    var LS_KEY = "xinyu-selfcomp";
+    document.getElementById("btn-sc-save").addEventListener("click", function () {
+      var harsh = document.getElementById("sc-harsh").value.trim();
+      var friend = document.getElementById("sc-friend").value.trim();
+      var self = document.getElementById("sc-self").value.trim();
+      if (!self && !friend) {
+        alert("至少写下一句给朋友或给自己的话，练习才算完成哦。");
+        return;
+      }
+      try {
+        localStorage.setItem(LS_KEY, JSON.stringify({
+          time: new Date().toLocaleString("zh-CN"),
+          self: self || friend
+        }));
+      } catch (e) {}
+      var box = document.getElementById("sc-result");
+      box.style.display = "block";
+      box.innerHTML = '<div class="result-block"><h3>你把这句善意，留给了自己</h3>' +
+        '<p style="font-style:italic;font-size:1.05rem;margin:0 0 8px;">「' +
+        esc(self || friend) + '」</p>' +
+        '<p style="margin:0;font-size:0.88rem;color:var(--text-muted);">说给自己听，不需要立刻相信。一遍一遍，它会慢慢变成你心里真实的声音。</p></div>';
+
+      ["sc-harsh", "sc-friend", "sc-self"].forEach(function (id) {
+        document.getElementById(id).value = "";
+      });
+    });
+
+    function esc(s) {
+      var d = document.createElement("div");
+      d.textContent = (s === undefined || s === null) ? "" : String(s);
+      return d.innerHTML;
+    }
+  })();
+  </script>
+</body>
+</html>
