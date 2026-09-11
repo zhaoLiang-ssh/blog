@@ -8,21 +8,39 @@
 
 ```
 .
-├── index.html          # 首页：工具箱入口
+├── index.html          # 首页：工具箱入口 + 站内搜索
 ├── emergency.html      # 情绪急救
-├── anxiety.html        # 焦虑缓解
-├── sleep.html          # 失眠助眠
-├── lowmood.html        # 低落自救
-├── mindfulness.html    # 正念练习
-├── resources.html      # 求助资源（热线与就医指南）
-├── about.html          # 关于与免责声明
-├── 404.html            # 自定义 404
-├── style.css           # 全局样式（含浅色/深色主题，柔和安抚配色）
-├── script.js           # 深色模式切换
-└── .nojekyll           # 让 GitHub Pages 以纯静态方式托管（不启用 Jekyll）
+├── anxiety.html       # 焦虑缓解
+├── sleep.html         # 失眠助眠
+├── lowmood.html      # 低落自救
+├── mindfulness.html   # 正念练习
+├── thoughtlog.html   # 想法记录（互动）
+├── selfcare.html     # 自我关怀（互动）
+├── action.html       # 行动空间（互动）
+├── relationship.html # 关系修复（互动）
+├── meaning.html     # 意义感（互动）
+├── books.html       # 延伸阅读
+├── resources.html   # 求助资源（热线与就医指南）
+├── about.html       # 关于与免责声明
+├── 404.html        # 自定义 404
+├── style.css       # 全局样式（主题 × 深浅 8 套变量、打印样式、响应式）
+├── script.js       # 主题管理（三态模式 + 四色调 + 本地记忆 + SW 注册）
+├── manifest.webmanifest # PWA 清单
+├── sw.js          # Service Worker（离线缓存）
+├── sitemap.xml    # 站点地图
+├── robots.txt     # 爬虫声明
+└── assets/       # og 分享图 og-cover.png、PWA 图标 icon-192/512
 ```
 
 所有内部链接均使用**相对路径**，因此无论部署在仓库根目录、`/docs`，还是子路径下都能正常工作。
+
+## 站点功能特性
+
+- **主题切换（8 套）**：三态外观模式（跟随系统 / 浅色 / 深色）× 四种安抚色调（鼠尾草 / 暖棕沙 / 湖泊蓝 / 松林），`localStorage` 记忆偏好，各页头部预加载脚本保证首屏无闪烁。
+- **站内搜索**：首页按关键词实时过滤工具卡片。
+- **离线可用（PWA）**：安装后可离线访问，便于情绪低落的时刻随时使用。
+- **无障碍**：`skip-link` 跳到主内容、危机条 `role="alert"`、键盘焦点样式统一。
+- **SEO / 分享**：每页 `canonical`、`og:` + Twitter Card、分享图 `og-cover.png`、`sitemap.xml`、`robots.txt`、`theme-color`。
 
 ## 站点设计原则
 
@@ -44,6 +62,8 @@
 ## 内容维护与更新
 
 - **新增工具页**：复制一个现有工具页，改标题与内容，在 `index.html` 的工具卡片网格里加一个条目即可。
+- **修改工具搜索**：搜索框会自动匹配卡片标题、描述与正文，无需额外维护索引。
+- **更换分享图**：替换 `assets/og-cover.png`（建议 1200×630）并保持同名即可。
 - **热线信息**：请定期核实在线热线（如 12356 / 12355 / 400-161-9995 等）的最新官方信息。
 
 ## 免责声明
