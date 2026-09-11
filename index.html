@@ -11,49 +11,78 @@
   <meta property="og:title" content="心屿 · 心理自助工具箱">
   <meta property="og:description" content="心屿是一个面向普通人的心理自助与情绪安抚工具站：情绪急救、焦虑缓解、失眠助眠、低落自救、正念练习、想法记录、自我关怀、行动空间、关系修复、意义感与求助资源，均免费可循证。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/index.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="心屿 · 心理自助工具箱">
   <meta name="twitter:description" content="心屿是一个面向普通人的心理自助与情绪安抚工具站：情绪急救、焦虑缓解、失眠助眠、低落自救、正念练习、想法记录、自我关怀、行动空间、关系修复、意义感与求助资源，均免费可循证。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "心屿 · 心理自助工具箱",
+    "url": "https://zhaoliang-ssh.github.io/blog/",
+    "description": "面向普通人的心理自助与情绪安抚工具站",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html" class="active">工具箱</a>
         <a href="books.html">延伸阅读</a>
         <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container">
+  <main id="main" class="container">
     <section class="hero">
       <h1>心屿 <span class="accent">· 心理自助工具箱</span></h1>
       <p class="tagline">当情绪翻涌、心里不好受的时候，这里是你可以待一会儿的地方。没有评判，只有一步一步、当下就能做的事。</p>
     </section>
 
+
+    <div class="search-box">
+      <label class="visually-hidden" for="toolSearch">搜索工具</label>
+      <input type="search" id="toolSearch" placeholder="搜索工具（如：焦虑、睡眠、正念…）" autocomplete="off" aria-label="搜索自助工具">
+    </div>
     <nav class="quick-links" aria-label="快速入口">
       <a class="quick-link acute" href="emergency.html">
         <div class="q-head"><span class="q-emoji">🧯</span>此刻很难受</div>
         <div class="q-desc">情绪突然崩溃、不知怎么办 → 先做情绪急救</div>
       </a>
-      <a class="quick-link growth" href="mindfulness.html">
+      <a class="quick-link growth" href="#tools">
         <div class="q-head"><span class="q-emoji">🧘</span>想长期改善</div>
         <div class="q-desc">焦虑、失眠、低落、正念…系统地照顾自己</div>
       </a>
     </nav>
 
-    <section class="tool-grid">
+    <h2 class="section-title" id="tools-title">自助工具</h2>
+    <section class="tool-grid" id="tools" aria-labelledby="tools-title">
       <a class="tool-card" href="emergency.html">
         <span class="tool-emoji" aria-hidden="true"><svg
   
@@ -224,26 +253,9 @@
         <h3>意义感</h3>
         <p>迷茫找不到方向时，从'为了谁、想创造什么、想体验什么'开始，找到此刻活下去的意义。</p>
       </a>
-      <a class="tool-card" href="resources.html">
-        <span class="tool-emoji" aria-hidden="true"><svg
- 
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-><path d="M13 2a9 9 0 0 1 9 9" /><path d="M13 6a5 5 0 0 1 5 5" /><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg></span>
-        <span class="tool-badge urgent">紧急求助</span>
-        <h3>求助资源</h3>
-        <p>24 小时心理援助热线、怎么挂号看医生、什么时候该找专业帮助——请别独自硬扛。</p>
-      </a>
-    </section>
+</section>
 
-    <a class="quick-link growth" href="books.html" style="margin-bottom:28px;">
+    <a class="quick-link growth books-banner" href="books.html">
       <div class="q-head"><span class="q-emoji">📚</span>延伸阅读 · 心理与自我成长好书</div>
       <div class="q-desc">认知、正念、自我关怀、意义 … 与每个工具对应的经典书单，想深入了解时来这里</div>
     </a>
@@ -261,9 +273,35 @@
       心屿是一个公益性质的心理自助信息站。所有内容仅供参考，不构成医疗建议，
       不能替代专业心理治疗。遇到紧急危机时，请第一时间拨打求助热线或就医。
     </p>
-    <p style="margin-top:6px;">© 2025 心屿 · 愿你在此歇一歇脚</p>
+    <p class="copy">© 2025–2026 心屿 · 愿你在此歇一歇脚</p>
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+  (function () {
+    var input = document.getElementById("toolSearch");
+    var grid = document.getElementById("tools");
+    if (!input || !grid) return;
+    var empty = document.createElement("div");
+    empty.className = "search-empty";
+    empty.id = "searchEmpty";
+    empty.textContent = "没有匹配的工具，试试其他关键词，或浏览下方全部工具。";
+    grid.parentNode.insertBefore(empty, grid.nextSibling);
+    function filterTools() {
+      var q = (input.value || "").trim().toLowerCase();
+      var cards = grid.querySelectorAll(".tool-card");
+      var shown = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var t = cards[i].textContent.toLowerCase();
+        var ok = !q || t.indexOf(q) !== -1;
+        cards[i].style.display = ok ? "" : "none";
+        if (ok) shown++;
+      }
+      empty.classList.toggle("show", shown === 0);
+    }
+    input.addEventListener("input", filterTools);
+  })();
+  </script>
 </body>
 </html>

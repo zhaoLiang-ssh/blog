@@ -11,32 +11,45 @@
   <meta property="og:title" content="低落自救 · 心屿">
   <meta property="og:description" content="低落自救练习：用行动先于感觉的小步骤法，一点点把没力气的自己重新启动起来。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/lowmood.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="低落自救 · 心屿">
   <meta name="twitter:description" content="低落自救练习：用行动先于感觉的小步骤法，一点点把没力气的自己重新启动起来。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">工具箱</a>
         <a href="books.html">延伸阅读</a>
         <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container tool-page">
+  <main id="main" class="container tool-page">
     <span class="page-tag"><svg
  
   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +100,7 @@
 
   <footer class="site-footer">
     <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。紧急危机请拨打热线或就医。</p>
-    <p style="margin-top:6px;">© 2025 心屿</p>
+    <p class="copy">© 2025–2026 心屿</p>
   </footer>
 
   <script src="script.js"></script>

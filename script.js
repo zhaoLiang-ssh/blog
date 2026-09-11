@@ -37,6 +37,10 @@
     root.setAttribute("data-mode", effectiveDark() ? "dark" : "light");
     root.setAttribute("data-theme", state.theme);
     toggle.textContent = effectiveDark() ? "☀️" : "🌙";
+    // theme-color meta sync
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    var color = effectiveDark() ? "#1a1f1c" : (THEME_COLORS[state.theme] ? THEME_COLORS[state.theme][0] : "#5e8c7e");
+    for (var mi = 0; mi < metas.length; mi++) metas[mi].setAttribute("content", color);
     syncUI();
   }
 
@@ -48,7 +52,10 @@
   var panel = document.createElement("div");
   panel.className = "theme-panel";
   panel.setAttribute("role", "dialog");
+  panel.setAttribute("aria-modal", "true");
   panel.setAttribute("aria-label", "主题设置");
+  panel.id = "themePanel";
+  panel.hidden = true;
 
   var modeSec = document.createElement("div");
   var h5 = document.createElement("h5");
@@ -103,6 +110,11 @@
   panel.appendChild(themeSec);
   wrap.appendChild(panel);
 
+  toggle.setAttribute("aria-label", "主题设置");
+  toggle.setAttribute("aria-haspopup", "dialog");
+  toggle.setAttribute("aria-controls", "themePanel");
+  toggle.setAttribute("aria-expanded", "false");
+
   function syncUI() {
     var modes = panel.querySelectorAll(".tp-mode");
     for (var i = 0; i < modes.length; i++) {
@@ -114,17 +126,33 @@
     }
   }
 
-  function openPanel(open) { panel.classList.toggle("open", open); }
+  var lastFocus = null;
+  function openPanel(open) {
+    panel.classList.toggle("open", open);
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) {
+      lastFocus = document.activeElement;
+      var firstBtn = panel.querySelector("button");
+      if (firstBtn) firstBtn.focus();
+    } else if (lastFocus) {
+      try { lastFocus.focus(); } catch (e) {}
+      lastFocus = null;
+    }
+  }
 
   toggle.addEventListener("click", function (e) {
     e.stopPropagation();
     openPanel(!panel.classList.contains("open"));
   });
   document.addEventListener("click", function (e) {
-    if (e.target !== toggle && !panel.contains(e.target)) openPanel(false);
+    if (e.target !== toggle && !panel.contains(e.target) && !wrap.contains(e.target)) openPanel(false);
   });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") openPanel(false);
+    if (e.key === "Escape" && panel.classList.contains("open")) {
+      openPanel(false);
+      toggle.focus();
+    }
   });
 
   // 跟随系统：监听系统明暗变化，仅 auto 模式自动跟随
@@ -135,4 +163,36 @@
   }
 
   apply();
+})();
+
+// 移动端导航汉堡菜单
+(function () {
+  var btn = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks") || document.querySelector(".nav-links");
+  if (!btn || !links) return;
+  if (!links.id) links.id = "navLinks";
+  btn.addEventListener("click", function () {
+    var open = !links.classList.contains("open");
+    links.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && links.classList.contains("open")) {
+      links.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "打开菜单");
+      btn.focus();
+    }
+  });
+})();
+
+// 可选：仅在存在 sw.js 时注册 Service Worker
+(function () {
+  if (!("serviceWorker" in navigator)) return;
+  var swUrl = "sw.js";
+  // 探测是否存在 sw.js，避免 404 噪音
+  fetch(swUrl, { method: "HEAD", cache: "no-store" }).then(function (r) {
+    if (r.ok) navigator.serviceWorker.register(swUrl).catch(function () {});
+  }).catch(function () {});
 })();

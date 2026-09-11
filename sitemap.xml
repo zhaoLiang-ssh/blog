@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://zhaoliang-ssh.github.io/blog/index.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/emergency.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/anxiety.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/sleep.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/lowmood.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/mindfulness.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/thoughtlog.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/selfcare.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/action.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/relationship.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/meaning.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/books.html</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/resources.html</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://zhaoliang-ssh.github.io/blog/about.html</loc><changefreq>monthly</changefreq></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://zhaoliang-ssh.github.io/blog/index.html</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/emergency.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/anxiety.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/sleep.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/lowmood.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/mindfulness.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/thoughtlog.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/selfcare.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/action.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/relationship.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/meaning.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/books.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/resources.html</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://zhaoliang-ssh.github.io/blog/about.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq></url>
 </urlset>

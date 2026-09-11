@@ -11,32 +11,45 @@
   <meta property="og:title" content="延伸阅读 · 心屿">
   <meta property="og:description" content="心理治愈与自我成长好书板块：每本书附原创内容导读、对应工具与正规获取渠道。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/books.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="延伸阅读 · 心屿">
   <meta name="twitter:description" content="心理治愈与自我成长好书板块，附原创导读与获取渠道。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">工具箱</a>
         <a href="books.html" class="active">延伸阅读</a>
         <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container tool-page">
+  <main id="main" class="container tool-page">
     <span class="page-tag"><svg
  
   xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +104,7 @@
         <li><strong>"共谋"的提醒</strong>：蛤蟆发现，自己有时会无意识地配合那个"批判自己的声音"——这是每个人在讨好型或自我苛责模式里都可能遇到的。</li>
       </ul>
       <p>它不是一本教人"立刻变好"的工具书，而更像一间温暖的小咨询室。读完你会明白：<strong>真正的改变常常不是突然发生的，而是在一次次被看见、被倾听之后，悄无声息地到来。</strong></p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="thoughtlog.html">想法记录</a> · <a href="lowmood.html">低落自救</a> ｜ 适合想了解"心理咨询是什么"的入门读者 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="thoughtlog.html">想法记录</a> · <a href="lowmood.html">低落自救</a> ｜ 适合想了解"心理咨询是什么"的入门读者 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <h2>新手入门三本（从易到深）</h2>
@@ -117,7 +130,7 @@
         <li><strong>活在当下</strong>：幸福不是远方的目标，而是此刻认真生活的过程中自然到来的东西。</li>
       </ul>
       <p>它最核心的鼓励是：<strong>你不需要所有人都喜欢你——拥有"被讨厌的勇气"，恰恰是自由和自己开始拿回人生主动权的开始。</strong>这本书尤其适合习惯讨好别人、过度在意评价、或总觉得自己"不够好"的人。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="thoughtlog.html">想法记录</a> ｜ 适合在意他人看法、讨好型人格、自我价值感低的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="thoughtlog.html">想法记录</a> ｜ 适合在意他人看法、讨好型人格、自我价值感低的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <div class="step" id="book-power">
@@ -131,7 +144,7 @@
         <li><strong>临在（Presence）</strong>：当你全然在此刻，焦虑和后悔都失去了落脚点。这是一种可以通过练习获得的平静状态。</li>
       </ul>
       <p>它和站里的 <a href="mindfulness.html">正念练习</a> 一脉相承，适合容易"想太多"、反复反刍、被焦虑和思绪淹没的人。它不提供速成的答案，但能带你重新回到身体和呼吸上——那是每个人随时可以停靠的岸。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="mindfulness.html">正念练习</a> ｜ 适合想太多、过度反刍、焦虑思绪停不下来的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="mindfulness.html">正念练习</a> ｜ 适合想太多、过度反刍、焦虑思绪停不下来的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <div class="step" id="book-not-fight">
@@ -145,7 +158,7 @@
         <li><strong>转化与慈悲</strong>：把批判转为慈悲，把逃避转为面对。这需要练习，但每一次转身，都让你更像你自己的盟友而非敌人。</li>
       </ul>
       <p>这本书特别适合那些对自己非常苛刻、总觉得"我不够好"、或正在经历困境却拼命想"振作起来"却更累的人。学会对自己慈悲，往往是那扇被忽略的门。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="selfcare.html">自我关怀</a> ｜ 适合自我批判、苛责自己、困在"必须振作"压力里的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="selfcare.html">自我关怀</a> ｜ 适合自我批判、苛责自己、困在"必须振作"压力里的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <div class="step" id="book-intimacy">
@@ -159,7 +172,7 @@
         <li><strong>关系需要经营而非宿命</strong>：好的关系不是"找到对的人就一劳永逸"，而是双方持续投入、共同维护的结果。</li>
       </ul>
       <p>这本书基于大量实证研究，篇幅较厚、偏教材，但对想认真理解亲密关系、或正在感情中困惑的人，是少见的"靠谱"之选。它的很多原理，也直接支撑了站里关系修复页的设计。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="relationship.html">关系修复</a> ｜ 适合想认真经营感情、理解亲密关系、正困惑于关系的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆 ｜ 注：市面上有同名书，这里指罗兰·米勒著</p>
+      <p class="meta-muted">对应工具：<a href="relationship.html">关系修复</a> ｜ 适合想认真经营感情、理解亲密关系、正困惑于关系的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆 ｜ 注：市面上有同名书，这里指罗兰·米勒著</p>
     </div>
 
     <div class="step" id="book-meditations">
@@ -173,7 +186,7 @@
         <li><strong>以宽厚待人所遇之人</strong>：敌意与恶意只是对方内心的反映，学会不把别人的问题变成自己的怒火。</li>
       </ul>
       <p>它的语言古老而克制，并不急着安慰你，却能在你烦躁、焦虑、想不开时，给你一份稳稳的定力。适合喜欢安静文字、想为自己建立一套"平静内核"的人。第一次读不必求全，随手翻到哪一节读哪一节就好。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="mindfulness.html">正念练习</a> ｜ 适合想要内心平静、容易思虑过重、喜欢安静文字的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="mindfulness.html">正念练习</a> ｜ 适合想要内心平静、容易思虑过重、喜欢安静文字的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <div class="step" id="book-inferiority">
@@ -187,7 +200,7 @@
         <li><strong>社会兴趣与归属</strong>：阿德勒强调人对"共同体"和"贡献"的需要——当我们感觉自己是重要的、被需要的、对他人有价值的，心理力量会大大增强。</li>
       </ul>
       <p>与《被讨厌的勇气》相比，这本书更深入个体心理学的根基，也更学术一些。适合已经读过《被讨厌的勇气》、想更系统地理解阿德勒思想、或常被"我不如别人"困住的人。</p>
-      <p style="color:var(--text-muted);font-size:0.9rem;">对应工具：<a href="lowmood.html">低落自救</a> · <a href="thoughtlog.html">想法记录</a> ｜ 适合常自卑、总觉得自己不够好、想系统理解阿德勒思想的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
+      <p class="meta-muted">对应工具：<a href="lowmood.html">低落自救</a> · <a href="thoughtlog.html">想法记录</a> ｜ 适合常自卑、总觉得自己不够好、想系统理解阿德勒思想的人 ｜ 获取：各大书店 / 当当·京东 / 微信读书 / 正版电子书平台 / 图书馆</p>
     </div>
 
     <div class="step" id="book-burns">
@@ -257,7 +270,7 @@
 
   <footer class="site-footer">
     <p class="disclaimer">本页书籍推荐与导读仅供延伸阅读参考，不构成医疗建议。所有书籍请通过正规渠道购买或借阅，本站不提供电子全文。紧急危机请拨打热线或就医。</p>
-    <p style="margin-top:6px;">© 2025 心屿</p>
+    <p class="copy">© 2025–2026 心屿</p>
   </footer>
 
   <script src="script.js"></script>

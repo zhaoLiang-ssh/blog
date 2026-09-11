@@ -11,32 +11,45 @@
   <meta property="og:title" content="意义感 · 心屿">
   <meta property="og:description" content="意义感练习：在迷茫与低谷中，从创造、体验、态度三个方向，温和地寻找此刻活下去的意义。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/meaning.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="意义感 · 心屿">
   <meta name="twitter:description" content="意义感练习：在迷茫与低谷中，从创造、体验、态度三个方向，温和地寻找此刻活下去的意义。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">工具箱</a>
         <a href="books.html">延伸阅读</a>
         <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container tool-page">
+  <main id="main" class="container tool-page">
     <span class="page-tag"><svg
  
   xmlns="http://www.w3.org/2000/svg"
@@ -104,13 +117,13 @@
       </div>
     </div>
 
-    <div id="mn-result" style="display:none;"></div>
+    <div id="mn-result" class="hidden"></div>
 
     <h2>一段话，送给在找意义的你</h2>
     <blockquote>
       "生命的意义不是被给予的，而是被我们<strong>追问</strong>出来的。重要的不是我们期待生命给我什么，而是生命期待我们从这一时刻的这一处境中活出什么。"
     </blockquote>
-    <p style="color:var(--text-muted);font-size:0.9rem;">—— 参考自维克多·弗兰克尔《活出生命的意义》之精神（非原文直引）</p>
+    <p class="meta-muted">—— 参考自维克多·弗兰克尔《活出生命的意义》之精神（非原文直引）</p>
 
     <div class="callout seek-help">
       <span class="label">如果无意义感挥之不去</span>
@@ -122,7 +135,7 @@
 
   <footer class="site-footer">
     <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习理念参考自意义疗法（Logotherapy，弗兰克尔《活出生命的意义》）。紧急危机请拨打热线或就医。</p>
-    <p style="margin-top:6px;">© 2025 心屿</p>
+    <p class="copy">© 2025–2026 心屿</p>
   </footer>
 
   <script src="script.js"></script>
@@ -147,8 +160,8 @@
       box.style.display = "block";
       var line = act || forw || cre || exp;
       box.innerHTML = '<div class="result-block"><h3>你为今天留下了一个方向</h3>' +
-        '<p style="font-size:1.05rem;font-style:italic;">「' + esc(line) + '」</p>' +
-        '<p style="margin:0;font-size:0.88rem;color:var(--text-muted);">不必立即相信它有意义。先去做一点，意义有时是走着走着，自己显出来的。</p></div>';
+        '<p class="result-quote">「' + esc(line) + '」</p>' +
+        '<p class="result-hint">不必立即相信它有意义。先去做一点，意义有时是走着走着，自己显出来的。</p></div>';
 
       ["mn-for","mn-create","mn-exp","mn-act"].forEach(function (id) {
         document.getElementById(id).value = "";

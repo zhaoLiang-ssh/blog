@@ -11,32 +11,45 @@
   <meta property="og:title" content="求助资源 · 心屿">
   <meta property="og:description" content="心理求助资源：全国统一心理援助热线12356、青少年服务台12355、120就近急救、就医指南与常见顾虑科普，含广东/珠海本地就医路径。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/resources.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="求助资源 · 心屿">
   <meta name="twitter:description" content="心理求助资源：全国统一心理援助热线12356、青少年服务台12355、120就近急救、就医指南与常见顾虑科普。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">工具箱</a>
         <a href="books.html">延伸阅读</a>
         <a href="resources.html" class="active">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container tool-page">
+  <main id="main" class="container tool-page">
     <span class="page-tag"><svg
  
   xmlns="http://www.w3.org/2000/svg"
@@ -56,41 +69,41 @@
     <div class="callout seek-help">
       <span class="label">立即拨打</span>
       <ul>
-        <li><strong>全国统一心理援助热线：12356</strong>（全国性，24 小时，珠海已开通并并轨运行）</li>
-        <li><strong>珠海市心理援助热线：0756-8120120</strong>（珠海本地，全年无休 24 小时）</li>
-        <li><strong>青少年服务台：12355</strong>（面向青少年的心理咨询与权益保护）</li>
-        <li><strong>120 急救电话</strong>：如果情况紧急、无法自处，不要犹豫，就近求助。</li>
+        <li><strong>全国统一心理援助热线：<a href="tel:12356">12356</a></strong>（全国性，24 小时，珠海已开通并并轨运行）</li>
+        <li><strong>珠海市心理援助热线：<a href="tel:0756-8120120">0756-8120120</a></strong>（珠海本地，全年无休 24 小时）</li>
+        <li><strong>青少年服务台：<a href="tel:12355">12355</a></strong>（面向青少年的心理咨询与权益保护）</li>
+        <li><strong><a href="tel:120">120</a> 急救电话</strong>：如果情况紧急、无法自处，不要犹豫，就近求助。</li>
         <li>如果有明确的就医需求，可以直接前往最近的<strong>医院急诊科</strong>。</li>
         <li>如果在海外，请拨打当地的心理援助或急救电话，或联系你所在国家的自杀预防热线。</li>
       </ul>
       <p>这些热线对公众免费、匿名、保密，你可以随时拨打。如果占线或打不通，请不要放弃，稍后再试，或者直接前往附近的医院急诊。</p>
-      <p style="margin-top:6px;font-size:0.85rem;color:var(--text-muted);">⚠️ 全国及各地热线信息可能随时调整，请<strong>以官方机构实时公布为准</strong>。本站会持续复核并更新。</p>
+      <p class="meta-muted sm">⚠️ 全国及各地热线信息可能随时调整，请<strong>以官方机构实时公布为准</strong>。本站会持续复核并更新。</p>
     </div>
 
     <h2>② 广东 / 珠海本地就医路径</h2>
     <div class="step">
       <div class="step-title">珠海本地心理援助热线</div>
-      <p>珠海市心理援助热线为 <strong>0756-8120120</strong>，全年无休、24 小时开放，由珠海市第三人民医院（珠海市慢性病防治中心）组建的专业精神心理团队值守。自 2025 年起，全国统一热线 12356 已在珠海开通，并与 0756-8120120 <strong>并轨运行</strong>——两个号码都可以随时拨打。</p>
-      <p style="font-size:0.9rem;color:var(--text-muted);">来源：珠海市卫生健康局 / 珠海市精神心理卫生协会 / 珠海市第三人民医院（以官方实时公布为准）</p>
+      <p>珠海市心理援助热线为 <a href="tel:0756-8120120"><strong>0756-8120120</strong></a>，全年无休、24 小时开放，由珠海市第三人民医院（珠海市慢性病防治中心）组建的专业精神心理团队值守。自 2025 年起，全国统一热线 <a href="tel:12356">12356</a> 已在珠海开通，并与 <a href="tel:0756-8120120">0756-8120120</a> <strong>并轨运行</strong>——两个号码都可以随时拨打。</p>
+      <p class="meta-muted">来源：珠海市卫生健康局 / 珠海市精神心理卫生协会 / 珠海市第三人民医院（以官方实时公布为准）</p>
     </div>
     <div class="step">
       <div class="step-title">珠海就医：精神心理门诊怎么挂</div>
       <p>珠海主要的精神心理门诊机构：</p>
       <ul>
-        <li><strong>珠海市第三人民医院</strong>（珠海市慢性病防治中心）——设有<strong>精神卫生科、临床心理科</strong>。官网 <code>www.zhsdsrmyy.com</code>，地址：珠海市香洲区和正路 166 号，医院总机 <strong>0756-239-0000</strong>。</li>
+        <li><strong>珠海市第三人民医院</strong>（珠海市慢性病防治中心）——设有<strong>精神卫生科、临床心理科</strong>。官网 <a href="https://www.zhsdsrmyy.com" rel="noopener noreferrer" target="_blank">www.zhsdsrmyy.com</a>，地址：珠海市香洲区和正路 166 号，医院总机 <a href="tel:0756-2390000"><strong>0756-239-0000</strong></a>。</li>
         <li>挂号方式：微信搜索<strong>“珠海市第三人民医院”</strong>关注公众号 → 就医服务 → 预约挂号，选择精神卫生科或临床心理科。</li>
         <li>珠海市卫生健康局官网发布有<strong>“珠海市医疗机构精神心理门诊信息一览表”</strong>，可查询市内各机构的精神心理门诊信息。</li>
       </ul>
-      <p style="font-size:0.9rem;color:var(--text-muted);">信息以医院官方/卫生健康部门实时公布为准。</p>
+      <p class="meta-muted">信息以医院官方/卫生健康部门实时公布为准。</p>
     </div>
     <div class="step">
       <div class="step-title">广东省相关公开渠道</div>
-      <p>全国统一的 12356 在广东全省通用。面向青少年，广东有<strong>12355 青少年综合服务平台</strong>（共青团广东省委设立），7×24 小时，提供热线 + “广东12355”小程序线上服务。省内不少医院精神心理科、各地心理援助热线也可查询，建议通过官方平台检索并<strong>以官方实时公布为准</strong>。</p>
+      <p>全国统一的 <a href="tel:12356">12356</a> 在广东全省通用。面向青少年，广东有<strong><a href="tel:12355">12355</a> 青少年综合服务平台</strong>（共青团广东省委设立），7×24 小时，提供热线 + “广东12355”小程序线上服务。省内不少医院精神心理科、各地心理援助热线也可查询，建议通过官方平台检索并<strong>以官方实时公布为准</strong>。</p>
     </div>
 
     <h2>③ 青少年与校园</h2>
     <ul>
-      <li><strong>12355 青少年服务台</strong>：面向青少年的心理咨询与权益维护热线，全国通用。</li>
+      <li><strong><a href="tel:12355">12355</a> 青少年服务台</strong>：面向青少年的心理咨询与权益维护热线，全国通用。</li>
       <li>许多学校设有<strong>心理辅导中心</strong>，可以免费、保密地与校内心理咨询师交流。</li>
     </ul>
 
@@ -135,7 +148,7 @@
 
   <footer class="site-footer">
     <p class="disclaimer">资源信息仅供参考，请以官方机构实时公布为准。本站不构成医疗建议，不能替代专业诊疗。紧急危机请拨打热线或就医。如你有广东/珠海本地的确切官方资源信息，欢迎<a href="mailto:zhaoliang19921002@gmail.com">来信</a>帮我们更正补充。</p>
-    <p style="margin-top:6px;">© 2025 心屿</p>
+    <p class="copy">© 2025–2026 心屿</p>
   </footer>
 
   <script src="script.js"></script>

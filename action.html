@@ -11,32 +11,45 @@
   <meta property="og:title" content="行动空间 · 心屿">
   <meta property="og:description" content="行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/action.html">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="行动空间 · 心屿">
   <meta name="twitter:description" content="行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;d.setAttribute("data-mode",s.mode||(dark?"dark":"light"));d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
     <nav class="nav">
       <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">工具箱</a>
         <a href="books.html">延伸阅读</a>
         <a href="resources.html">求助资源</a>
         <a href="about.html">关于</a>
       </div>
-      <button id="themeToggle" class="theme-toggle" aria-label="切换深色模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
     </nav>
   </header>
 
-  <div class="crisis-bar" role="alert" aria-label="紧急求助热线提示">
+  <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
     <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <strong>12356</strong>、青少年服务台 <strong>12355</strong>，或拨打 <strong>120</strong> 就近急救，也可以联系身边你可信任的人。
+    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
   </div>
 
-  <main class="container tool-page">
+  <main id="main" class="container tool-page">
     <span class="page-tag"><svg
  
   xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +82,8 @@
 
       <div id="action-list"></div>
 
-      <div style="text-align:center;margin-top:14px;">
-        <button class="btn ghost" id="btn-day-done" style="margin-right:10px;">今日完成 ✓</button>
+      <div class="action-toolbar">
+        <button class="btn ghost" id="btn-day-done">今日完成 ✓</button>
         <button class="btn ghost" id="btn-clear-done">清除已完成</button>
       </div>
     </div>
@@ -81,11 +94,15 @@
     </div>
 
     <h2>行动-心情小记录</h2>
-    <p style="color:var(--text-muted);font-size:0.92rem;">做完几个动作后，感觉如何？一句话记下来，回头能看到自己的变化。（保存在本机）</p>
+    <p class="privacy-note">做完几个动作后，感觉如何？一句话记下来，回头能看到自己的变化。本机存储，不上传；换设备不同步。</p>
+    <div class="privacy-actions">
+      <button type="button" class="btn ghost" id="btn-export-action">导出 JSON</button>
+      <button type="button" class="btn ghost" id="btn-clear-all-action">清空全部数据</button>
+    </div>
     <div class="action-space">
-      <textarea id="mood-note" aria-label="记录此刻心情" rows="2" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-family:inherit;font-size:0.95rem;resize:vertical;min-height:56px;" placeholder=" 例：今天走了 10 分钟，虽然还是提不起劲，但比躺着不动感觉好一点。"></textarea>
-      <div style="text-align:center;margin-top:12px;"><button class="btn" id="btn-mood-save">保存心情记录</button></div>
-      <div id="mood-history" style="margin-top:12px;"></div>
+      <textarea id="mood-note" class="mood-note" aria-label="记录此刻心情" rows="2" placeholder=" 例：今天走了 10 分钟，虽然还是提不起劲，但比躺着不动感觉好一点。"></textarea>
+      <div class="mood-save-wrap"><button class="btn" id="btn-mood-save">保存心情记录</button></div>
+      <div id="mood-history" class="mood-history"></div>
     </div>
 
     <div class="callout seek-help">
@@ -98,7 +115,7 @@
 
   <footer class="site-footer">
     <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本工具方法参考自行为激活（BA）与心理自助材料（如《走出抑郁》）。紧急危机请拨打热线或就医。</p>
-    <p style="margin-top:6px;">© 2025 心屿</p>
+    <p class="copy">© 2025–2026 心屿</p>
   </footer>
 
   <script src="script.js"></script>
@@ -189,6 +206,26 @@
           '<div class="h-thought">' + esc(m.text) + '</div></div>';
       }).join("");
     }
+
+    document.getElementById("btn-clear-all-action").addEventListener("click", function () {
+      if (!confirm("确定清空本机全部行动清单与心情记录吗？此操作不可撤销。")) return;
+      items = [];
+      moodHist = [];
+      localStorage.removeItem(LS_KEY);
+      localStorage.removeItem(LS_MOOD);
+      render();
+      renderMood();
+    });
+    document.getElementById("btn-export-action").addEventListener("click", function () {
+      var data = { actions: items, mood: moodHist };
+      var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "xinyu-action-" + new Date().toISOString().slice(0, 10) + ".json";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+
     renderMood();
 
     function esc(s) {
