@@ -1,0 +1,67 @@
+---
+title: "行动空间 · 心屿"
+description: "行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。"
+permalink: "/action.html"
+mainClass: "container tool-page"
+toolPage: true
+footerDisclaimer: "内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本工具方法参考自行为激活（BA）与心理自助材料（如《走出抑郁》）。紧急危机请拨打热线或就医。"
+footerCopy: "© 2025–2026 心屿"
+pageScript: page-scripts/action.js
+layout: base.njk
+---
+
+<span class="page-tag">{% icon "action" %}行动空间</span>
+    <h1>一格一格，把生活重新启动</h1>
+    <p class="lead">情绪低落时，最怕的是"目标太大，动不起来"。行为激活（BA）的核心很简单：<strong>行动先于感觉</strong>——先做一点点，情绪往往会被带着动起来，而不是干等着有心情才动。这里是你的行动清单，只放小到不会失败的一步。</p>
+
+    <h2>先看懂"行动先于感觉"</h2>
+    <p>当我们低落时，大脑会发出"没心情，所以做不了"的信号。但如果一直等"心情好了再做"，可能永远也等不到。行为激活的做法是：<strong>先迈出一小步</strong>，哪怕没有心情——很多时候，动起来之后，心情才跟着回来。所以这里不问你"想不想做"，只问"能不能做最小的一步"。</p>
+
+    <h2>添加今天的第一个小行动</h2>
+    <div class="action-space">
+      <div class="action-input">
+        <input type="text" id="new-action" aria-label="新增一条小行动" placeholder=" 例：把杯子放到水槽 / 站起来走 3 步 / 给一个朋友发句'在吗'">
+        <button class="btn" id="btn-add">添加</button>
+      </div>
+
+      <div class="action-progress">
+        <div class="bar"><i id="prog-bar"></i></div>
+        <div class="p-text" id="prog-text">0 / 0</div>
+      </div>
+
+      <div id="action-list"></div>
+
+      <div class="action-toolbar">
+        <button class="btn ghost" id="btn-day-done">今日完成 ✓</button>
+        <button class="btn ghost" id="btn-clear-done">清除已完成</button>
+      </div>
+    </div>
+
+    <div class="callout note">
+      <span class="label">小到不会失败</span>
+      <p>判断这条行动合不合格，看一个标准：<strong>它小到你几乎不可能失败</strong>。"写一页"太大，改成"打开文档写一行"；"收拾房间"太大，改成"收起一件衣服"。完成一次，就是给低落中的大脑一次"我做到了"的正反馈。</p>
+    </div>
+
+    <h2>行动-心情小记录</h2>
+    <p class="privacy-note">做完几个动作后，感觉如何？一句话记下来，回头能看到自己的变化。本机存储，不上传；换设备不同步。</p>
+    <p class="privacy-warn" role="note">请勿在公共电脑或他人设备上保存敏感内容；离开前请清空。导出文件请勿上传到不可信云盘。历史最多保留约 50 条。</p>
+    <label class="storage-mode">
+      <input type="checkbox" id="storage-session"> 会话模式（关闭标签页后自动清除，适合公共电脑）
+    </label>
+    <div class="privacy-actions">
+      <button type="button" class="btn ghost" id="btn-export-action">导出 JSON</button>
+      <label class="btn ghost file-btn">导入 JSON<input type="file" id="btn-import-action" accept="application/json,.json" hidden></label>
+      <button type="button" class="btn ghost" id="btn-clear-all-action">清空全部数据</button>
+    </div>
+    <div class="action-space">
+      <textarea id="mood-note" class="mood-note" aria-label="记录此刻心情" rows="2" placeholder=" 例：今天走了 10 分钟，虽然还是提不起劲，但比躺着不动感觉好一点。"></textarea>
+      <div class="mood-save-wrap"><button class="btn" id="btn-mood-save">保存心情记录</button></div>
+      <div id="mood-history" class="mood-history"></div>
+    </div>
+
+    <div class="callout seek-help">
+      <span class="label">如果连最小的一步都推不动</span>
+      <p>如果你的低落到了"连一个最小的动作都没有力气做"的程度，或已经持续很久、伴随丧失对所有事物的兴趣，这很重要，也很常见——请去专业的心理科/精神科看看，行为激活配合专业治疗才会有更好的效果。<a href="resources.html">去看看</a>。</p>
+    </div>
+
+    <a class="back-home" href="index.html">← 回到工具箱</a>

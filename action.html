@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>  <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>行动空间 · 心屿</title>
   <meta name="description" content="行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。">
+  
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  
   <link rel="canonical" href="https://zhaoliang-ssh.github.io/blog/action.html">
+  
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="心屿 · 心理自助工具箱">
   <meta property="og:title" content="行动空间 · 心屿">
   <meta property="og:description" content="行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/action.html">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="行动空间 · 心屿">
   <meta name="twitter:description" content="行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
-    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "行动空间 · 心屿",
+    "description": "行动空间工具：行为激活（BA），把小到不会失败的一步放进清单，行动先于感觉地重新启动生活。",
+    "url": "https://zhaoliang-ssh.github.io/blog/action.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "心屿 · 心理自助工具箱",
+      "url": "https://zhaoliang-ssh.github.io/blog/"
+    },
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  
+  <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
-  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">工具箱</a>
-        <a href="books.html">延伸阅读</a>
-        <a href="resources.html">求助资源</a>
-        <a href="about.html">关于</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
-      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a class="logo" href="index.html">心屿</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">工具箱</a>
+      <a href="books.html">延伸阅读</a>
+      <a href="resources.html">求助资源</a>
+      <a href="about.html">关于</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
+  </nav>
+</header>
 
   <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
-    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
-    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
-  </div>
+  <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+  请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+  <a class="crisis-more" href="resources.html">更多求助资源 →</a>
+</div>
+
 
   <main id="main" class="container tool-page">
-    <span class="page-tag"><svg
- 
+    
+    <nav class="breadcrumb" aria-label="面包屑">
+      <a href="index.html">工具箱</a>
+      <span aria-hidden="true"> › </span>
+      <span aria-current="page">行动空间</span>
+    </nav>
+    
+    
+<span class="page-tag"><svg
+  class="lucide lucide-footprints"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -61,7 +96,12 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" /><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" /><path d="M16 17h4" /><path d="M4 13h4" /></svg>行动空间</span>
+>
+  <path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" />
+  <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" />
+  <path d="M16 17h4" />
+  <path d="M4 13h4" />
+</svg>行动空间</span>
     <h1>一格一格，把生活重新启动</h1>
     <p class="lead">情绪低落时，最怕的是"目标太大，动不起来"。行为激活（BA）的核心很简单：<strong>行动先于感觉</strong>——先做一点点，情绪往往会被带着动起来，而不是干等着有心情才动。这里是你的行动清单，只放小到不会失败的一步。</p>
 
@@ -95,8 +135,13 @@
 
     <h2>行动-心情小记录</h2>
     <p class="privacy-note">做完几个动作后，感觉如何？一句话记下来，回头能看到自己的变化。本机存储，不上传；换设备不同步。</p>
+    <p class="privacy-warn" role="note">请勿在公共电脑或他人设备上保存敏感内容；离开前请清空。导出文件请勿上传到不可信云盘。历史最多保留约 50 条。</p>
+    <label class="storage-mode">
+      <input type="checkbox" id="storage-session"> 会话模式（关闭标签页后自动清除，适合公共电脑）
+    </label>
     <div class="privacy-actions">
       <button type="button" class="btn ghost" id="btn-export-action">导出 JSON</button>
+      <label class="btn ghost file-btn">导入 JSON<input type="file" id="btn-import-action" accept="application/json,.json" hidden></label>
       <button type="button" class="btn ghost" id="btn-clear-all-action">清空全部数据</button>
     </div>
     <div class="action-space">
@@ -111,131 +156,173 @@
     </div>
 
     <a class="back-home" href="index.html">← 回到工具箱</a>
+
   </main>
 
   <footer class="site-footer">
-    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本工具方法参考自行为激活（BA）与心理自助材料（如《走出抑郁》）。紧急危机请拨打热线或就医。</p>
-    <p class="copy">© 2025–2026 心屿</p>
-  </footer>
+  <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本工具方法参考自行为激活（BA）与心理自助材料（如《走出抑郁》）。紧急危机请拨打热线或就医。</p>
+  <p class="copy">© 2025–2026 心屿</p>
+</footer>
 
   <script src="script.js"></script>
+  
   <script>
   (function () {
-    var LS_KEY = "xinyu-actions";
-    var LS_MOOD = "xinyu-mood";
-    var items = [];
-    try { items = JSON.parse(localStorage.getItem(LS_KEY) || "[]"); } catch (e) { items = []; }
+  var Store = window.XinyuStore;
+  var UI = window.XinyuUI;
+  var esc = Store.esc;
+  var LS_KEY = "xinyu-actions";
+  var LS_MOOD = "xinyu-mood";
+  var items = Store.capArray(Store.getJSON(LS_KEY, []) || []);
 
-    var listEl = document.getElementById("action-list");
-    var barEl = document.getElementById("prog-bar");
-    var progText = document.getElementById("prog-text");
+  var listEl = document.getElementById("action-list");
+  var barEl = document.getElementById("prog-bar");
+  var progText = document.getElementById("prog-text");
 
-    function save() { localStorage.setItem(LS_KEY, JSON.stringify(items)); render(); }
+  function save() {
+    items = Store.capArray(items);
+    if (Store.setJSON(LS_KEY, items)) render();
+  }
 
-    function render() {
-      if (!items.length) {
-        listEl.innerHTML = '<div class="action-empty">还没有行动计划。从最小的一步开始吧。</div>';
-        barEl.style.width = "0%";
-        progText.textContent = "0 / 0";
-        return;
-      }
-      var done = items.filter(function (i) { return i.done; }).length;
-      listEl.innerHTML = items.map(function (it, idx) {
-        return '<div class="action-item' + (it.done ? " done" : "") + '">' +
-          '<input type="checkbox" ' + (it.done ? "checked" : "") + ' data-idx="' + idx + '">' +
-          '<span class="a-text">' + esc(it.text) + '</span>' +
-          '<button class="a-del" data-idx="' + idx + '" aria-label="删除">✕</button></div>';
-      }).join("");
-      var pct = Math.round(done / items.length * 100);
-      barEl.style.width = pct + "%";
-      progText.textContent = done + " / " + items.length + " 已完成";
-      // bind events
-      listEl.querySelectorAll('input[type=checkbox]').forEach(function (c) {
-        c.addEventListener("change", function () {
-          items[parseInt(c.getAttribute("data-idx"))].done = c.checked;
-          save();
-        });
-      });
-      listEl.querySelectorAll(".a-del").forEach(function (b) {
-        b.addEventListener("click", function () {
-          items.splice(parseInt(b.getAttribute("data-idx")), 1);
-          save();
-        });
-      });
+  function render() {
+    if (!items.length) {
+      listEl.innerHTML = '<div class="action-empty">还没有行动计划。从最小的一步开始吧。</div>';
+      barEl.style.width = "0%";
+      progText.textContent = "0 / 0";
+      return;
     }
-
-    document.getElementById("btn-add").addEventListener("click", function () {
-      var inp = document.getElementById("new-action");
-      var t = inp.value.trim();
-      if (!t) return;
-      items.push({ text: t, done: false });
-      inp.value = "";
-      save();
+    var done = items.filter(function (i) { return i.done; }).length;
+    listEl.innerHTML = items.map(function (it, idx) {
+      return '<div class="action-item' + (it.done ? " done" : "") + '">' +
+        '<input type="checkbox" ' + (it.done ? "checked" : "") + ' data-idx="' + idx + '">' +
+        '<span class="a-text">' + esc(it.text) + '</span>' +
+        '<button class="a-del" data-idx="' + idx + '" aria-label="删除">✕</button></div>';
+    }).join("");
+    var pct = Math.round(done / items.length * 100);
+    barEl.style.width = pct + "%";
+    progText.textContent = done + " / " + items.length + " 已完成";
+    listEl.querySelectorAll('input[type=checkbox]').forEach(function (c) {
+      c.addEventListener("change", function () {
+        items[parseInt(c.getAttribute("data-idx"))].done = c.checked;
+        save();
+      });
     });
-    document.getElementById("new-action").addEventListener("keydown", function (e) {
-      if (e.key === "Enter") document.getElementById("btn-add").click();
+    listEl.querySelectorAll(".a-del").forEach(function (b) {
+      b.addEventListener("click", function () {
+        items.splice(parseInt(b.getAttribute("data-idx")), 1);
+        save();
+      });
     });
+  }
 
-    document.getElementById("btn-clear-done").addEventListener("click", function () {
-      items = items.filter(function (i) { return !i.done; });
-      save();
+  document.getElementById("btn-add").addEventListener("click", function () {
+    var inp = document.getElementById("new-action");
+    var t = inp.value.trim();
+    if (!t) return;
+    items.push({ text: t, done: false });
+    inp.value = "";
+    save();
+  });
+  document.getElementById("new-action").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") document.getElementById("btn-add").click();
+  });
+
+  document.getElementById("btn-clear-done").addEventListener("click", function () {
+    items = items.filter(function (i) { return !i.done; });
+    save();
+  });
+
+  document.getElementById("btn-day-done").addEventListener("click", function () {
+    items.forEach(function (i) { i.done = true; });
+    save();
+  });
+
+  var moodHist = Store.capArray(Store.getJSON(LS_MOOD, []) || []);
+  document.getElementById("btn-mood-save").addEventListener("click", function () {
+    var t = document.getElementById("mood-note").value.trim();
+    if (!t) { UI.alert("先写一句感受再保存吧。"); return; }
+    moodHist.unshift({ time: new Date().toLocaleString("zh-CN"), text: t });
+    moodHist = Store.capArray(moodHist);
+    if (!Store.setJSON(LS_MOOD, moodHist)) return;
+    document.getElementById("mood-note").value = "";
+    renderMood();
+  });
+  function renderMood() {
+    var el = document.getElementById("mood-history");
+    if (!moodHist.length) { el.innerHTML = ""; return; }
+    el.innerHTML = moodHist.map(function (m) {
+      return '<div class="history-item"><div class="h-time">' + esc(m.time) + '</div>' +
+        '<div class="h-thought">' + esc(m.text) + '</div></div>';
+    }).join("");
+  }
+
+  var sessionCb = document.getElementById("storage-session");
+  if (sessionCb) {
+    sessionCb.checked = Store.getMode() === "session";
+    sessionCb.addEventListener("change", function () {
+      Store.setMode(sessionCb.checked ? "session" : "local");
+      UI.alert(sessionCb.checked
+        ? "已切换为会话模式：关闭标签页后记录不会保留。"
+        : "已切换为长期本机保存。");
     });
+  }
 
-    // 今日完成：全部勾选
-    document.getElementById("btn-day-done").addEventListener("click", function () {
-      items.forEach(function (i) { i.done = true; });
-      save();
-    });
-
-    // 心情记录
-    var moodHist = [];
-    try { moodHist = JSON.parse(localStorage.getItem(LS_MOOD) || "[]"); } catch (e) {}
-    document.getElementById("btn-mood-save").addEventListener("click", function () {
-      var t = document.getElementById("mood-note").value.trim();
-      if (!t) { alert("先写一句感受再保存吧。"); return; }
-      moodHist.unshift({ time: new Date().toLocaleString("zh-CN"), text: t });
-      localStorage.setItem(LS_MOOD, JSON.stringify(moodHist));
-      document.getElementById("mood-note").value = "";
-      renderMood();
-    });
-    function renderMood() {
-      var el = document.getElementById("mood-history");
-      if (!moodHist.length) { el.innerHTML = ""; return; }
-      el.innerHTML = moodHist.map(function (m) {
-        return '<div class="history-item"><div class="h-time">' + esc(m.time) + '</div>' +
-          '<div class="h-thought">' + esc(m.text) + '</div></div>';
-      }).join("");
-    }
-
-    document.getElementById("btn-clear-all-action").addEventListener("click", function () {
-      if (!confirm("确定清空本机全部行动清单与心情记录吗？此操作不可撤销。")) return;
+  document.getElementById("btn-clear-all-action").addEventListener("click", function () {
+    UI.confirm("确定清空本机全部行动清单与心情记录吗？此操作不可撤销。").then(function (ok) {
+      if (!ok) return;
       items = [];
       moodHist = [];
-      localStorage.removeItem(LS_KEY);
-      localStorage.removeItem(LS_MOOD);
+      Store.remove(LS_KEY);
+      Store.remove(LS_MOOD);
       render();
       renderMood();
     });
-    document.getElementById("btn-export-action").addEventListener("click", function () {
-      var data = { actions: items, mood: moodHist };
-      var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-      var a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "xinyu-action-" + new Date().toISOString().slice(0, 10) + ".json";
-      a.click();
-      URL.revokeObjectURL(a.href);
+  });
+
+  document.getElementById("btn-export-action").addEventListener("click", function () {
+    var data = { actions: items, mood: moodHist };
+    var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "xinyu-action-" + new Date().toISOString().slice(0, 10) + ".json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+    UI.alert("导出完成。请勿把文件上传到不可信的云盘或公开网盘。");
+  });
+
+  var importInput = document.getElementById("btn-import-action");
+  if (importInput) {
+    importInput.addEventListener("change", function () {
+      var file = importInput.files && importInput.files[0];
+      importInput.value = "";
+      if (!file) return;
+      Store.readFileAsJSON(file).then(function (data) {
+        if (!data || (!Array.isArray(data.actions) && !Array.isArray(data.mood) && !Array.isArray(data))) {
+          UI.alert("无法识别该 JSON。请使用本站导出的行动空间文件。");
+          return;
+        }
+        return UI.confirm("导入将与现有数据合并。继续？").then(function (ok) {
+          if (!ok) return;
+          if (Array.isArray(data.actions)) items = Store.capArray(data.actions.concat(items));
+          else if (Array.isArray(data)) items = Store.capArray(data.concat(items));
+          if (Array.isArray(data.mood)) moodHist = Store.capArray(data.mood.concat(moodHist));
+          Store.setJSON(LS_KEY, items);
+          Store.setJSON(LS_MOOD, moodHist);
+          render();
+          renderMood();
+          UI.alert("导入完成。");
+        });
+      }).catch(function () {
+        UI.alert("读取文件失败，请确认是 UTF-8 的 JSON。");
+      });
     });
+  }
 
-    renderMood();
+  renderMood();
+  render();
+})();
 
-    function esc(s) {
-      var d = document.createElement("div");
-      d.textContent = (s === undefined || s === null) ? "" : String(s);
-      return d.innerHTML;
-    }
-
-    render();
-  })();
   </script>
+  
 </body>
 </html>

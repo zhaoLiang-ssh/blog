@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>  <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>想法记录 · 心屿</title>
   <meta name="description" content="想法记录工具：用认知行为疗法（CBT）把自动想法写下来、识别认知扭曲、重评为更平衡的看法，记录只保存在本机。">
+  
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  
   <link rel="canonical" href="https://zhaoliang-ssh.github.io/blog/thoughtlog.html">
+  
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="心屿 · 心理自助工具箱">
   <meta property="og:title" content="想法记录 · 心屿">
   <meta property="og:description" content="想法记录工具：用认知行为疗法（CBT）把自动想法写下来、识别认知扭曲、重评为更平衡的看法，记录只保存在本机。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/thoughtlog.html">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="想法记录 · 心屿">
   <meta name="twitter:description" content="想法记录工具：用认知行为疗法（CBT）把自动想法写下来、识别认知扭曲、重评为更平衡的看法，记录只保存在本机。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
-    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "想法记录 · 心屿",
+    "description": "想法记录工具：用认知行为疗法（CBT）把自动想法写下来、识别认知扭曲、重评为更平衡的看法，记录只保存在本机。",
+    "url": "https://zhaoliang-ssh.github.io/blog/thoughtlog.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "心屿 · 心理自助工具箱",
+      "url": "https://zhaoliang-ssh.github.io/blog/"
+    },
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  
+  <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
-  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">工具箱</a>
-        <a href="books.html">延伸阅读</a>
-        <a href="resources.html">求助资源</a>
-        <a href="about.html">关于</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
-      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a class="logo" href="index.html">心屿</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">工具箱</a>
+      <a href="books.html">延伸阅读</a>
+      <a href="resources.html">求助资源</a>
+      <a href="about.html">关于</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
+  </nav>
+</header>
 
   <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
-    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
-    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
-  </div>
+  <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+  请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+  <a class="crisis-more" href="resources.html">更多求助资源 →</a>
+</div>
+
 
   <main id="main" class="container tool-page">
-    <span class="page-tag"><svg
- 
+    
+    <nav class="breadcrumb" aria-label="面包屑">
+      <a href="index.html">工具箱</a>
+      <span aria-hidden="true"> › </span>
+      <span aria-current="page">想法记录</span>
+    </nav>
+    
+    
+<span class="page-tag"><svg
+  class="lucide lucide-notebook-pen"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -61,7 +96,14 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /><path d="M2 6h4" /><path d="M2 10h4" /><path d="M2 14h4" /><path d="M2 18h4" /><path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></svg>想法记录</span>
+>
+  <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+  <path d="M2 6h4" />
+  <path d="M2 10h4" />
+  <path d="M2 14h4" />
+  <path d="M2 18h4" />
+  <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+</svg>想法记录</span>
     <h1>把脑子里的念头，摆到纸上</h1>
     <p class="lead">很多时候，让我们难受的不是事情本身，而是它在我们脑子里激起的那句"自动想法"——"我肯定不行""大家都不喜欢我"。这个工具借用认知行为疗法（CBT）的方法，帮你把想法写下来、看清它、再重评为更平衡的看法。写下来，往往就从"一团乱麻"变成了"可以直视的文字"。</p>
 
@@ -149,8 +191,13 @@
     <!-- History -->
     <h2>我的历史记录</h2>
     <p class="privacy-note">本机存储，不上传；换设备不同步。过段时间回看，往往能看到自己的变化。</p>
+    <p class="privacy-warn" role="note">请勿在公共电脑或他人设备上保存敏感内容；离开前请清空。导出的 JSON 请勿上传到不可信云盘。历史最多保留约 50 条。</p>
+    <label class="storage-mode">
+      <input type="checkbox" id="storage-session"> 会话模式（关闭标签页后自动清除，适合公共电脑）
+    </label>
     <div class="privacy-actions">
       <button type="button" class="btn ghost" id="btn-export">导出 JSON</button>
+      <label class="btn ghost file-btn">导入 JSON<input type="file" id="btn-import" accept="application/json,.json" hidden></label>
       <button type="button" class="btn ghost" id="btn-clear-all">清空全部记录</button>
     </div>
     <div class="history-list" id="history"></div>
@@ -161,148 +208,155 @@
     </div>
 
     <a class="back-home" href="index.html">← 回到工具箱</a>
+
   </main>
 
   <footer class="site-footer">
-    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习方法参考自认知行为疗法（CBT）自助材料（如《伯恩斯新情绪疗法》）。紧急危机请拨打热线或就医。</p>
-    <p class="copy">© 2025–2026 心屿</p>
-  </footer>
+  <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。本练习方法参考自认知行为疗法（CBT）自助材料（如《伯恩斯新情绪疗法》）。紧急危机请拨打热线或就医。</p>
+  <p class="copy">© 2025–2026 心屿</p>
+</footer>
 
   <script src="script.js"></script>
+  
   <script>
   (function () {
-    var LS_KEY = "xinyu-thoughtlog";
-    var history = [];
-    try {
-      history = JSON.parse(localStorage.getItem(LS_KEY) || "[]");
-    } catch (e) { history = []; }
+  var Store = window.XinyuStore;
+  var UI = window.XinyuUI;
+  var LS_KEY = "xinyu-thoughtlog";
+  var history = Store.capArray(Store.getJSON(LS_KEY, []) || []);
 
-    // --- 认知扭曲清单 ---
-    var distortions = [
-      { name: "非黑即白", desc: "非好即坏，没有中间地带。例：\"要么完美，要么彻底失败。\"" },
-      { name: "过度概括", desc: "一次不好的经历，就推断成永远如此。例：\"这次不行，我以后都不行。\"" },
-      { name: "心理过滤", desc: "只盯着消极的一面，忽略积极的部分。" },
-      { name: "否定正面", desc: "把好事归因于运气或偶然，而不是自己的能力。" },
-      { name: "妄下结论", desc: "没有证据就下判断（读心：认为别人在想自己；算命：断言坏事会发生）。" },
-      { name: "放大或缩小", desc: "把困难灾难化，把自己的优点或努力缩小。" },
-      { name: "情绪化推理", desc: "因为\"我感觉很糟\"，就认定\"事情真的很糟\"。" },
-      { name: "应该句式", desc: "用\"我应该/我必须\"苛责自己，产生压力和愧疚。" },
-      { name: "贴标签", desc: "用一个标签概括自己：\"我是个没用的人\"。" },
-      { name: "个人化", desc: "把不属于自己的责任揽到自己身上：\"都是我的错\"。" }
-    ];
+  var distortions = [
+    { name: "非黑即白", desc: "非好即坏，没有中间地带。例：\"要么完美，要么彻底失败。\"" },
+    { name: "过度概括", desc: "一次不好的经历，就推断成永远如此。例：\"这次不行，我以后都不行。\"" },
+    { name: "心理过滤", desc: "只盯着消极的一面，忽略积极的部分。" },
+    { name: "否定正面", desc: "把好事归因于运气或偶然，而不是自己的能力。" },
+    { name: "妄下结论", desc: "没有证据就下判断（读心：认为别人在想自己；算命：断言坏事会发生）。" },
+    { name: "放大或缩小", desc: "把困难灾难化，把自己的优点或努力缩小。" },
+    { name: "情绪化推理", desc: "因为\"我感觉很糟\"，就认定\"事情真的很糟\"。" },
+    { name: "应该句式", desc: "用\"我应该/我必须\"苛责自己，产生压力和愧疚。" },
+    { name: "贴标签", desc: "用一个标签概括自己：\"我是个没用的人\"。" },
+    { name: "个人化", desc: "把不属于自己的责任揽到自己身上：\"都是我的错\"。" }
+  ];
 
-    // --- 渲染认知扭曲选项 ---
-    var dl = document.getElementById("distort-list");
-    distortions.forEach(function (d, i) {
-      var el = document.createElement("label");
-      el.className = "distort";
-      el.innerHTML =
-        '<input type="checkbox" data-idx="' + i + '">' +
-        '<div><div class="d-name">' + d.name + '</div><div class="d-desc">' + d.desc + '</div></div>';
-      el.addEventListener("click", function () {
-        el.classList.toggle("checked", el.querySelector("input").checked);
-      });
-      dl.appendChild(el);
+  var dl = document.getElementById("distort-list");
+  distortions.forEach(function (d, i) {
+    var el = document.createElement("label");
+    el.className = "distort";
+    el.innerHTML =
+      '<input type="checkbox" data-idx="' + i + '">' +
+      '<div><div class="d-name">' + d.name + '</div><div class="d-desc">' + d.desc + '</div></div>';
+    el.addEventListener("click", function () {
+      el.classList.toggle("checked", el.querySelector("input").checked);
     });
+    dl.appendChild(el);
+  });
 
-    // --- 情绪滑杆联动 ---
-    function bindSlider(sliderId, valId) {
-      var s = document.getElementById(sliderId);
-      var v = document.getElementById(valId);
-      s.addEventListener("input", function () { v.textContent = s.value; });
-    }
-    bindSlider("f-score", "f-score-val");
-    bindSlider("f-score2", "f-score2-val");
+  function bindSlider(sliderId, valId) {
+    var s = document.getElementById(sliderId);
+    var v = document.getElementById(valId);
+    s.addEventListener("input", function () { v.textContent = s.value; });
+  }
+  bindSlider("f-score", "f-score-val");
+  bindSlider("f-score2", "f-score2-val");
 
-    // --- 输入自动保存草稿 ---
-    var fields = ["f-situation", "f-thought", "f-feel-name", "f-rethink"];
-    var sliders = ["f-score", "f-score2"];
-    (function loadDraft() {
-      try {
-        var d = JSON.parse(localStorage.getItem("xinyu-draft") || "{}");
-        fields.forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el && d[id] !== undefined) el.value = d[id];
-        });
-        sliders.forEach(function (id) {
-          var el = document.getElementById(id);
-          if (el && d[id] !== undefined) el.value = d[id];
-          document.getElementById(id + "-val").textContent = el.value;
-        });
-      } catch (e) {}
-    })();
-    function saveDraft() {
-      var d = {};
-      fields.forEach(function (id) { d[id] = document.getElementById(id).value; });
-      sliders.forEach(function (id) { d[id] = document.getElementById(id).value; });
-      localStorage.setItem("xinyu-draft", JSON.stringify(d));
-    }
+  var fields = ["f-situation", "f-thought", "f-feel-name", "f-rethink"];
+  var sliders = ["f-score", "f-score2"];
+  (function loadDraft() {
+    var d = Store.getJSON("xinyu-draft", {}) || {};
     fields.forEach(function (id) {
-      document.getElementById(id).addEventListener("input", saveDraft);
+      var el = document.getElementById(id);
+      if (el && d[id] !== undefined) el.value = d[id];
     });
     sliders.forEach(function (id) {
-      document.getElementById(id).addEventListener("input", saveDraft);
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (d[id] !== undefined) el.value = d[id];
+      var valEl = document.getElementById(id + "-val");
+      if (valEl) valEl.textContent = el.value;
+    });
+  })();
+  function saveDraft() {
+    var d = {};
+    fields.forEach(function (id) { d[id] = document.getElementById(id).value; });
+    sliders.forEach(function (id) { d[id] = document.getElementById(id).value; });
+    Store.setJSON("xinyu-draft", d);
+  }
+  fields.forEach(function (id) {
+    document.getElementById(id).addEventListener("input", saveDraft);
+  });
+  sliders.forEach(function (id) {
+    document.getElementById(id).addEventListener("input", saveDraft);
+  });
+
+  var sessionCb = document.getElementById("storage-session");
+  if (sessionCb) {
+    sessionCb.checked = Store.getMode() === "session";
+    sessionCb.addEventListener("change", function () {
+      Store.setMode(sessionCb.checked ? "session" : "local");
+      UI.alert(sessionCb.checked
+        ? "已切换为会话模式：关闭标签页后记录不会保留。"
+        : "已切换为长期本机保存。");
+    });
+  }
+
+  var resultBox = document.getElementById("result");
+  var esc = Store.esc;
+  document.getElementById("btn-save").addEventListener("click", function () {
+    var situation = document.getElementById("f-situation").value.trim();
+    var thought = document.getElementById("f-thought").value.trim();
+    var feelName = document.getElementById("f-feel-name").value.trim();
+    var score1 = document.getElementById("f-score").value;
+    var score2 = document.getElementById("f-score2").value;
+    var rethink = document.getElementById("f-rethink").value.trim();
+
+    var checked = [];
+    dl.querySelectorAll("input:checked").forEach(function (c) {
+      checked.push(distortions[parseInt(c.getAttribute("data-idx"))].name);
     });
 
-    // --- 保存记录 ---
-    var resultBox = document.getElementById("result");
-    document.getElementById("btn-save").addEventListener("click", function () {
-      var situation = document.getElementById("f-situation").value.trim();
-      var thought = document.getElementById("f-thought").value.trim();
-      var feelName = document.getElementById("f-feel-name").value.trim();
-      var score1 = document.getElementById("f-score").value;
-      var score2 = document.getElementById("f-score2").value;
-      var rethink = document.getElementById("f-rethink").value.trim();
+    if (!thought && !situation) {
+      UI.alert("至少填写一下情境或自动想法，才能保存哦。");
+      return;
+    }
 
-      // 选中的扭曲
-      var checked = [];
-      dl.querySelectorAll("input:checked").forEach(function (c) {
-        checked.push(distortions[parseInt(c.getAttribute("data-idx"))].name);
-      });
+    var rec = {
+      time: new Date().toLocaleString("zh-CN"),
+      situation: situation,
+      thought: thought,
+      feelName: feelName,
+      checked: checked,
+      rethink: rethink,
+      score1: parseInt(score1),
+      score2: parseInt(score2)
+    };
+    history.unshift(rec);
+    history = Store.capArray(history);
+    if (!Store.setJSON(LS_KEY, history)) return;
 
-      if (!thought && !situation) {
-        alert("至少填写一下情境或自动想法，才能保存哦。");
-        return;
-      }
+    var delta = rec.score1 - rec.score2;
+    var deltaText = delta > 0 ? ("下降了 " + delta + " 分") : (delta === 0 ? "没有变化" : "上升了 " + Math.abs(delta) + " 分");
+    resultBox.classList.remove("hidden");
+    resultBox.innerHTML =
+      '<div class="result-block">' +
+        '<h3>已完成一次记录</h3>' +
+        '<div class="row"><span class="k">情境：</span>' + esc(rec.situation) + '</div>' +
+        '<div class="row"><span class="k">自动想法：</span>' + esc(rec.thought) + '</div>' +
+        (rec.checked.length ? '<div class="row"><span class="k">可能存在的扭曲：</span>' + esc(rec.checked.join("、")) + '</div>' : '') +
+        '<div class="row"><span class="k">更平衡的看法：</span>' + esc(rec.rethink) + '</div>' +
+        '<div class="score-compare">' +
+          '<div>重评前<br><span class="big">' + rec.score1 + '</span></div>' +
+          '<div>重评后<br><span class="big">' + rec.score2 + '</span></div>' +
+          '<div class="score-delta-wrap">情绪强度<span class="delta">' + deltaText + '</span></div>' +
+        '</div>' +
+        '<p class="result-hint sm">写下来本身，就是在把情绪交还给理智。为自己做了这一步，很棒。</p>' +
+      '</div>';
+    renderHistory();
+    UI.alert("已保存！可以在下方看到你的记录。");
+  });
 
-      var rec = {
-        time: new Date().toLocaleString("zh-CN"),
-        situation: situation,
-        thought: thought,
-        feelName: feelName,
-        checked: checked,
-        rethink: rethink,
-        score1: parseInt(score1),
-        score2: parseInt(score2)
-      };
-      history.unshift(rec);
-      localStorage.setItem(LS_KEY, JSON.stringify(history));
-
-      // 显示结果
-      var delta = rec.score1 - rec.score2;
-      var deltaText = delta > 0 ? ("下降了 " + delta + " 分") : (delta === 0 ? "没有变化" : "上升了 " + Math.abs(delta) + " 分");
-      resultBox.classList.remove("hidden");
-      resultBox.innerHTML =
-        '<div class="result-block">' +
-          '<h3>已完成一次记录</h3>' +
-          '<div class="row"><span class="k">情境：</span>' + esc(rec.situation) + '</div>' +
-          '<div class="row"><span class="k">自动想法：</span>' + esc(rec.thought) + '</div>' +
-          (rec.checked.length ? '<div class="row"><span class="k">可能存在的扭曲：</span>' + esc(rec.checked.join("、")) + '</div>' : '') +
-          '<div class="row"><span class="k">更平衡的看法：</span>' + esc(rec.rethink) + '</div>' +
-          '<div class="score-compare">' +
-            '<div>重评前<br><span class="big">' + rec.score1 + '</span></div>' +
-            '<div>重评后<br><span class="big">' + rec.score2 + '</span></div>' +
-            '<div class="score-delta-wrap">情绪强度<span class="delta">' + deltaText + '</span></div>' +
-          '</div>' +
-          '<p class="result-hint sm">写下来本身，就是在把情绪交还给理智。为自己做了这一步，很棒。</p>' +
-        '</div>';
-      renderHistory();
-      alert("已保存！可以在下方看到你的记录。");
-    });
-
-    // --- 清空 ---
-    document.getElementById("btn-reset").addEventListener("click", function () {
-      if (!confirm("确定清空当前表单吗？（历史记录不会删除）")) return;
+  document.getElementById("btn-reset").addEventListener("click", function () {
+    UI.confirm("确定清空当前表单吗？（历史记录不会删除）").then(function (ok) {
+      if (!ok) return;
       fields.forEach(function (id) { document.getElementById(id).value = ""; });
       document.getElementById("f-score").value = 5;
       document.getElementById("f-score2").value = 5;
@@ -313,47 +367,72 @@
       resultBox.classList.add("hidden");
       saveDraft();
     });
+  });
 
-
-    document.getElementById("btn-clear-all").addEventListener("click", function () {
-      if (!confirm("确定清空本机全部想法记录与草稿吗？此操作不可撤销。")) return;
+  document.getElementById("btn-clear-all").addEventListener("click", function () {
+    UI.confirm("确定清空本机全部想法记录与草稿吗？此操作不可撤销。").then(function (ok) {
+      if (!ok) return;
       history = [];
-      localStorage.removeItem(LS_KEY);
-      localStorage.removeItem("xinyu-draft");
+      Store.remove(LS_KEY);
+      Store.remove("xinyu-draft");
       resultBox.classList.add("hidden");
       renderHistory();
     });
-    document.getElementById("btn-export").addEventListener("click", function () {
-      var blob = new Blob([JSON.stringify(history, null, 2)], { type: "application/json" });
-      var a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "xinyu-thoughtlog-" + new Date().toISOString().slice(0, 10) + ".json";
-      a.click();
-      URL.revokeObjectURL(a.href);
-    });
+  });
 
-    // --- 渲染历史 ---
-    function esc(s) {
-      var d = document.createElement("div");
-      d.textContent = (s === undefined || s === null) ? "" : String(s);
-      return d.innerHTML;
+  document.getElementById("btn-export").addEventListener("click", function () {
+    var blob = new Blob([JSON.stringify(history, null, 2)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "xinyu-thoughtlog-" + new Date().toISOString().slice(0, 10) + ".json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+    UI.alert("导出完成。请勿把文件上传到不可信的云盘或公开网盘。");
+  });
+
+  var importInput = document.getElementById("btn-import");
+  if (importInput) {
+    importInput.addEventListener("change", function () {
+      var file = importInput.files && importInput.files[0];
+      importInput.value = "";
+      if (!file) return;
+      Store.readFileAsJSON(file).then(function (data) {
+        var list = Array.isArray(data) ? data : (data && Array.isArray(data.history) ? data.history : null);
+        if (!list) {
+          UI.alert("无法识别该 JSON。请使用本站导出的想法记录文件。");
+          return;
+        }
+        return UI.confirm("导入将与现有记录合并（最多保留 " + Store.MAX_ITEMS + " 条）。继续？").then(function (ok) {
+          if (!ok) return;
+          history = Store.capArray(list.concat(history));
+          if (!Store.setJSON(LS_KEY, history)) return;
+          renderHistory();
+          UI.alert("已导入 " + list.length + " 条记录。");
+        });
+      }).catch(function () {
+        UI.alert("读取文件失败，请确认是 UTF-8 的 JSON。");
+      });
+    });
+  }
+
+  function renderHistory() {
+    var h = document.getElementById("history");
+    if (!history.length) {
+      h.innerHTML = '<div class="empty-hint">还没有记录。等你准备好写第一条时，这里会出现它。</div>';
+      return;
     }
-    function renderHistory() {
-      var h = document.getElementById("history");
-      if (!history.length) {
-        h.innerHTML = '<div class="empty-hint">还没有记录。等你准备好写第一条时，这里会出现它。</div>';
-        return;
-      }
-      h.innerHTML = history.map(function (r, i) {
-        return '<div class="history-item">' +
-          '<div class="h-time">' + esc(r.time) + ' &nbsp; 情绪 ' + r.score1 + ' → ' + r.score2 + '</div>' +
-          '<div class="h-thought">💭 ' + esc(r.thought) + '</div>' +
-          (r.rethink ? '<div class="h-rethink">✓ ' + esc(r.rethink) + '</div>' : '') +
-          '</div>';
-      }).join("");
-    }
-    renderHistory();
-  })();
+    h.innerHTML = history.map(function (r) {
+      return '<div class="history-item">' +
+        '<div class="h-time">' + esc(r.time) + ' &nbsp; 情绪 ' + r.score1 + ' → ' + r.score2 + '</div>' +
+        '<div class="h-thought">💭 ' + esc(r.thought) + '</div>' +
+        (r.rethink ? '<div class="h-rethink">✓ ' + esc(r.rethink) + '</div>' : '') +
+        '</div>';
+    }).join("");
+  }
+  renderHistory();
+})();
+
   </script>
+  
 </body>
 </html>

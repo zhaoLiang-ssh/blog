@@ -1,0 +1,16 @@
+{
+  "name": "xinyu-blog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy && node scripts/sync-root.mjs",
+    "build:only": "eleventy",
+    "start": "eleventy --serve --port=8080",
+    "migrate": "node scripts/migrate-to-11ty.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check": "npm run build:only && npm run check:links"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

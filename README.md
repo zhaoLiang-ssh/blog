@@ -2,69 +2,68 @@
 
 一个纯静态（HTML / CSS / JavaScript）的公益心理自助信息站，可免费部署到 **GitHub Pages**。
 
-当情绪翻涌、心里不好受的时候，这里提供几个"当下就能做"的自助工具，并强调：本内容不构成医疗建议、不能替代专业诊疗，遇到危机请第一时间拨打求助热线。
+当情绪翻涌、心里不好受的时候，这里提供几个“当下就能做”的自助工具，并强调：本内容不构成医疗建议、不能替代专业诊疗，遇到危机请第一时间拨打求助热线。
 
-## 项目结构
+## 开发与构建
+
+本站使用 [Eleventy (11ty)](https://www.11ty.dev/) 做页面壳层拼装：改导航 / 危机条 / 页脚只需改一处。
+
+```bash
+npm install
+npm start          # 本地预览 http://localhost:8080
+npm run build      # 构建到 _site/，并同步回仓库根目录（兼容 Pages 根目录部署）
+npm run check      # 构建 + 相对链接 / sitemap 校验
+```
+
+| 路径 | 说明 |
+|------|------|
+| `src/pages/` | 各页正文（Nunjucks） |
+| `src/_layouts/`、`src/_includes/` | 布局与公共片段 |
+| `src/_includes/page-scripts/` | 页内脚本 |
+| `public/` | 静态资源（CSS/JS/SW/图标/热线 JSON…） |
+| 仓库根目录 `*.html` 等 | **构建产物**（供 GitHub Pages 直接发布） |
+
+日常改内容：编辑 `src/` 或 `public/` → `npm run build` → 提交。
+
+## 项目结构（构建后根目录仍可直接浏览）
 
 ```
 .
-├── index.html          # 首页：工具箱入口 + 站内搜索
-├── emergency.html      # 情绪急救
-├── anxiety.html       # 焦虑缓解
-├── sleep.html         # 失眠助眠
-├── lowmood.html      # 低落自救
-├── mindfulness.html   # 正念练习
-├── thoughtlog.html   # 想法记录（互动）
-├── selfcare.html     # 自我关怀（互动）
-├── action.html       # 行动空间（互动）
-├── relationship.html # 关系修复（互动）
-├── meaning.html     # 意义感（互动）
-├── books.html       # 延伸阅读
-├── resources.html   # 求助资源（热线与就医指南）
-├── about.html       # 关于与免责声明
-├── 404.html        # 自定义 404
-├── style.css       # 全局样式（主题 × 深浅 8 套变量、打印样式、响应式）
-├── script.js       # 主题管理（三态模式 + 四色调 + 本地记忆 + SW 注册）
-├── manifest.webmanifest # PWA 清单
-├── sw.js          # Service Worker（离线缓存）
-├── sitemap.xml    # 站点地图
-├── robots.txt     # 爬虫声明
-└── assets/       # og 分享图 og-cover.png、PWA 图标 icon-192/512
+├── src/                # 源码（优先改这里）
+├── public/             # 静态资源源
+├── scripts/            # 迁移 / 校验 / 同步脚本
+├── .github/workflows/  # CI（npm run check）
+├── index.html …        # 构建产物页面
+├── style.css / script.js / sw.js
+├── data/hotlines.json  # 热线核验数据（含 verifiedAt）
+└── assets/             # og 图、PWA 图标、工具图标 SVG
 ```
 
-所有内部链接均使用**相对路径**，因此无论部署在仓库根目录、`/docs`，还是子路径下都能正常工作。
+所有内部链接均使用**相对路径**，因此无论部署在仓库根目录还是子路径下都能正常工作。
 
 ## 站点功能特性
 
-- **主题切换（8 套）**：三态外观模式（跟随系统 / 浅色 / 深色）× 四种安抚色调（鼠尾草 / 暖棕沙 / 湖泊蓝 / 松林），`localStorage` 记忆偏好，各页头部预加载脚本保证首屏无闪烁。
-- **站内搜索**：首页按关键词实时过滤工具卡片。
-- **离线可用（PWA）**：安装后可离线访问，便于情绪低落的时刻随时使用。
-- **无障碍**：`skip-link` 跳到主内容、危机条 `role="alert"`、键盘焦点样式统一。
-- **SEO / 分享**：每页 `canonical`、`og:` + Twitter Card、分享图 `og-cover.png`、`sitemap.xml`、`robots.txt`、`theme-color`。
-
-## 站点设计原则
-
-- **伦理底线优先**：每个页面顶部有危机求助提示条，全站含免责声明，内容不诊断、不打标签。
-- **当下可执行**：每个工具页都是"分钟级、随手能做"的步骤，而非长篇道理。
-- **深色模式**：夜间浏览舒适（很多情绪低落的时刻发生在夜里）。
-- **柔和配色**：低饱和的鼠尾草绿 + 暖灰，尽量不刺激情绪。
+- **主题切换（8 套）**：三态外观模式 × 四种安抚色调，`localStorage` 记忆，首屏无闪烁。
+- **站内搜索**：首页实时过滤；命中危机关键词时优先展示求助入口。
+- **离线可用（PWA）**：Service Worker 缓存（发版请递增 `public/sw.js` 的 `CACHE`）。
+- **无障碍**：skip-link、危机条、键盘焦点、面包屑、打印样式。
+- **SEO / 分享**：canonical、OG、Twitter Card、sitemap、robots。
 
 ## 部署到 GitHub Pages
 
-把本站所有文件上传到仓库根目录，然后在仓库 **Settings → Pages**：
+1. `npm run build`
+2. 把构建后的根目录文件推到仓库（当前仍支持 **Settings → Pages → Deploy from a branch → `/ (root)`**）
+3. CI（`.github/workflows/ci.yml`）会在 push / PR 时跑 `npm run check`
 
-- Source：`Deploy from a branch`
-- Branch：`main`，文件夹 `/ (root)`
-- 保存后等待 1–2 分钟即可访问 `https://你的用户名.github.io/仓库名/`
-
-之后每次 `git push` 到 `main`，GitHub Pages 会自动重新发布。
+之后每次改源码并 `npm run build` 后 `git push`，Pages 会重新发布。
 
 ## 内容维护与更新
 
-- **新增工具页**：复制一个现有工具页，改标题与内容，在 `index.html` 的工具卡片网格里加一个条目即可。
-- **修改工具搜索**：搜索框会自动匹配卡片标题、描述与正文，无需额外维护索引。
-- **更换分享图**：替换 `assets/og-cover.png`（建议 1200×630）并保持同名即可。
-- **热线信息**：请定期核实在线热线（如 12356 / 12355 / 400-161-9995 等）的最新官方信息。
+- **新增工具页**：在 `src/pages/` 复制一页，改 front matter 与正文；在 `src/pages/index.njk` 加卡片；如需图标，放 `public/assets/icons/*.svg` 并用 `{% icon "name" %}`。
+- **热线信息**：核实后更新 `src/pages/resources.njk` 的核验日期与 `public/data/hotlines.json`。
+- **发版注意**：关键文案或缓存策略变更时，递增 `public/sw.js` 的 `CACHE`，并更新 `public/sitemap.xml` 的 `lastmod`。
+
+许可与贡献见 [LICENSE.md](LICENSE.md)、[CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 免责声明
 

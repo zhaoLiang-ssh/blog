@@ -1,0 +1,17 @@
+<header class="site-header">
+  <nav class="nav">
+    <a class="logo" href="index.html">心屿</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html"{% if nav == "home" %} class="active"{% endif %}>工具箱</a>
+      <a href="books.html"{% if nav == "books" %} class="active"{% endif %}>延伸阅读</a>
+      <a href="resources.html"{% if nav == "resources" %} class="active"{% endif %}>求助资源</a>
+      <a href="about.html"{% if nav == "about" %} class="active"{% endif %}>关于</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
+  </nav>
+</header>

@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>  <meta charset="UTF-8">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>正念练习 · 心屿</title>
   <meta name="description" content="正念练习：三分钟呼吸空间、身体扫描与日常正念，把注意力温和地带回当下。">
+  
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  
+  
   <link rel="canonical" href="https://zhaoliang-ssh.github.io/blog/mindfulness.html">
+  
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="心屿 · 心理自助工具箱">
   <meta property="og:title" content="正念练习 · 心屿">
   <meta property="og:description" content="正念练习：三分钟呼吸空间、身体扫描与日常正念，把注意力温和地带回当下。">
   <meta property="og:url" content="https://zhaoliang-ssh.github.io/blog/mindfulness.html">
+  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="正念练习 · 心屿">
   <meta name="twitter:description" content="正念练习：三分钟呼吸空间、身体扫描与日常正念，把注意力温和地带回当下。">
-    <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
-    <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
+  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("mind-theme")||"{}");var d=document.documentElement;var dark=matchMedia("(prefers-color-scheme: dark)").matches;var m=s.mode;if(m!=="light"&&m!=="dark")m=dark?"dark":"light";d.setAttribute("data-mode",m);d.setAttribute("data-theme",s.theme||"sage")}catch(e){}})();</script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "正念练习 · 心屿",
+    "description": "正念练习：三分钟呼吸空间、身体扫描与日常正念，把注意力温和地带回当下。",
+    "url": "https://zhaoliang-ssh.github.io/blog/mindfulness.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "心屿 · 心理自助工具箱",
+      "url": "https://zhaoliang-ssh.github.io/blog/"
+    },
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  
+  <meta name="theme-color" content="#5e8c7e" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1f1c" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <meta property="og:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
-  <meta name="twitter:image" content="https://zhaoliang-ssh.github.io/blog/assets/og-cover.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="index.html">心屿</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">工具箱</a>
-        <a href="books.html">延伸阅读</a>
-        <a href="resources.html">求助资源</a>
-        <a href="about.html">关于</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
-      <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
-    </nav>
-  </header>
+  <nav class="nav">
+    <a class="logo" href="index.html">心屿</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">工具箱</a>
+      <a href="books.html">延伸阅读</a>
+      <a href="resources.html">求助资源</a>
+      <a href="about.html">关于</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <button id="themeToggle" class="theme-toggle" aria-label="主题设置" aria-expanded="false">🌙</button>
+  </nav>
+</header>
 
   <div class="crisis-bar" role="region" aria-label="紧急求助热线提示">
-    <span class="crisis-title">如果你正有自伤或自杀的念头</span>
-    请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
-    <a class="crisis-more" href="resources.html">更多求助资源 →</a>
-  </div>
+  <span class="crisis-title">如果你正有自伤或自杀的念头</span>
+  请立即拨打全国心理援助热线 <a href="tel:12356"><strong>12356</strong></a>、青少年服务台 <a href="tel:12355"><strong>12355</strong></a>，或拨打 <a href="tel:120"><strong>120</strong></a> 就近急救，也可以联系身边你可信任的人。
+  <a class="crisis-more" href="resources.html">更多求助资源 →</a>
+</div>
+
 
   <main id="main" class="container tool-page">
-    <span class="page-tag"><svg
- 
+    
+    <nav class="breadcrumb" aria-label="面包屑">
+      <a href="index.html">工具箱</a>
+      <span aria-hidden="true"> › </span>
+      <span aria-current="page">正念练习</span>
+    </nav>
+    
+    
+<span class="page-tag"><svg
+  class="lucide lucide-flower"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
@@ -61,7 +96,18 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-><circle cx="12" cy="12" r="3" /><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5" /><path d="M12 7.5V9" /><path d="M7.5 12H9" /><path d="M16.5 12H15" /><path d="M12 16.5V15" /><path d="m8 8 1.88 1.88" /><path d="M14.12 9.88 16 8" /><path d="m8 16 1.88-1.88" /><path d="M14.12 14.12 16 16" /></svg>正念练习</span>
+>
+  <circle cx="12" cy="12" r="3" />
+  <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5" />
+  <path d="M12 7.5V9" />
+  <path d="M7.5 12H9" />
+  <path d="M16.5 12H15" />
+  <path d="M12 16.5V15" />
+  <path d="m8 8 1.88 1.88" />
+  <path d="M14.12 9.88 16 8" />
+  <path d="m8 16 1.88-1.88" />
+  <path d="M14.12 14.12 16 16" />
+</svg>正念练习</span>
     <h1>把注意力，带回当下</h1>
     <p class="lead">正念不是"放空"，也不是"什么都不想"，而是温和地留意此刻正在发生的事——尤其是身体和呼吸。它不需要特殊的姿势，随时随地都能开始。走神很正常，把注意力轻轻带回来，这本身就是练习。</p>
 
@@ -106,13 +152,15 @@
     </div>
 
     <a class="back-home" href="index.html">← 回到工具箱</a>
+
   </main>
 
   <footer class="site-footer">
-    <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。紧急危机请拨打热线或就医。</p>
-    <p class="copy">© 2025–2026 心屿</p>
-  </footer>
+  <p class="disclaimer">内容仅供参考，不构成医疗建议，不能替代专业心理治疗。紧急危机请拨打热线或就医。</p>
+  <p class="copy">© 2025–2026 心屿</p>
+</footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>
